@@ -1,0 +1,35 @@
+.predstava{
+    margin: auto;
+    width: 90%;
+    padding: 20px;
+    background-color: rgba(63, 0, 0, 0.7);
+    box-shadow: 8px 9px 6px -6px rgb(41, 0, 0);
+    color: rgb(255, 255, 255);
+    margin-top: 5%;
+}
+
+.slika, .text{
+    display: inline-block;
+}
+
+.text{
+    padding: 20px;
+}
+
+.detaljnije{
+    background-color: rgba(40, 0, 0, 0.85);
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+    box-shadow: 8px 9px 6px -6px rgb(19, 0, 0);
+}
+
+.slika{
+    width: 200px;
+}
+
+.opis{
+    width: 700px;
+}
+
+

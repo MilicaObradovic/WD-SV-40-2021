@@ -1,0 +1,35 @@
+.pocetna-slika{
+    width: 80%;
+    
+}
+.pocetna{
+    margin: auto;
+    text-align: center;
+}
+
+.korisnik{
+    margin: auto;
+    /* width: 35%; */
+    padding: 20px;
+    background-color: rgba(19, 0, 0, 0.5);
+    box-shadow: 8px 9px 6px -6px rgb(41, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.unutrasnje{
+    margin: auto;
+    width: 50%;
+    /* padding-left: 40px; */
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .korisnik{
+        width:50%;
+    }
+  }
+
+@media screen and (min-width: 1200px) {
+    .korisnik{
+        width:35%;
+    }
+}

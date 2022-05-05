@@ -1,0 +1,26 @@
+.pocetna-slika{
+    width: 80%;
+    
+}
+
+.pocetna{
+    margin: auto;
+    text-align: center;
+}
+
+.izmeni{
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 8px 9px 6px -6px rgb(19, 0, 0);
+}
+
+.predstava{
+    margin: auto;
+    width: 80%;
+    padding: 20px;
+    background-color: rgba(19, 0, 0, 0.5);
+    box-shadow: 8px 9px 6px -6px rgb(41, 0, 0);
+    color: rgb(255, 255, 255);
+}

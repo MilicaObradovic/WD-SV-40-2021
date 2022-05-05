@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pocetna</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="pocetna.css">
+    <link rel="stylesheet" href="nav-bar.css">
+
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img class="logo" src="slike/logo.png" alt="Logo"></a>
+            <button class="d-block d-sm-none btn btn-outline-light" id="dugme3" type="button" onclick="openForm3()">
+                Prijava
+            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="pocetna.html">Pocetna</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Predstave
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="pozoriste1.html">Srpsko narodno pozoriste</a></li>
+                            <li><a class="dropdown-item" href="#">Pozoriste mladih</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Narodno poozoriste Nis</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="korisnici.html">Korisnici</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="korisnik1.html">Profil</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="pocetna">
+        <img class="pocetna-slika" src="slike/pocetna1.jpeg" alt="Flowers in Chania">
+    </div>
+    <div class="page-header zaglavlje">
+        <h1>Pocetna</h1>
+    </div>
+
+    <div class="container">
+        <div class="row sekcija">
+            <div class="col-sm-12 col-lg-7 col-xl-6">
+                <img class="pozoriste img-responsive" src="slike/pozoriste1.jpeg" alt="Flowers in Chania">
+            </div>
+            <div class="text col-sm-12 col-lg-5 col-xl-6">
+                <h2>Srpsko narodno pozoriste</h2>
+                <p>Adresa: Pozorišni trg 1, Novi Sad 21000</p>
+                <p>Broj predstava: 30</p>
+                <h3 class="predstave"><a href="pozoriste1.html">Predstave</a></h3>
+            </div><br><br>
+        </div>
+        <div class="row sekcija">
+            <div class="col-sm-12 col-lg-7 col-xl-6">
+                <img class="pozoriste img-responsive" src="slike/pozoriste1.jpeg" alt="Flowers in Chania">
+            </div>
+            <div class="text col-sm-12 col-lg-5 col-xl-6">
+                <h2>Srpsko narodno pozoriste</h2>
+                <p>Adresa: Pozorišni trg 1, Novi Sad 21000</p>
+                <p>Broj predstava: 30</p>
+                <h3 class="predstave"><a href="pozoriste1.html">Predstave</a></h3>
+            </div><br><br>
+        </div>
+    </div><br><br>
+    <div class="buttons">
+        <button id="dugme" class="open-button d-none d-sm-block" onclick="openForm()">Login</button>
+        <button id="dugme2" class="open-button2 d-none d-sm-block" onclick="openForm2()">Register</button>
+    </div>
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Login</h1>
+
+            <label for="email"><b>Korisnicko ime</b></label>
+            <input type="text" placeholder="Unesite korisnicko ime" name="email" required>
+
+            <label for="psw"><b>Lozinka</b></label>
+            <input type="text" placeholder="Unesite lozinku" name="psw" required>
+
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <div class="form-popup2" id="myForm2">
+        <form action="/action_page.php" class="form-container2">
+            <h1>Register</h1>
+            <div class="first">
+                <label for="email"><b>Korisnick ime</b></label>
+                <input type="text" placeholder="Unesite korisnicko ime" name="email" required>
+
+                <label for="psw"><b>Lozinka</b></label>
+                <input type="text" placeholder="Unesite lozinku" name="psw" required>
+
+                <label for="email"><b>Ime</b></label>
+                <input type="text" placeholder="Unesite ime" name="email" required>
+
+                <label for="psw"><b>Prezime</b></label>
+                <input type="text" placeholder="Unesite prezime" name="psw" required>
+            </div>
+            <div class="second">
+                <label for="email"><b>Telefon</b></label>
+                <input type="text" placeholder="Unesite telefon" name="email" required>
+
+                <label for="psw"><b>Adresa</b></label>
+                <input type="text" placeholder="Unesite adresu" name="psw" required>
+
+                <label for="email"><b>Datum rodjenja</b></label>
+                <input type="text" placeholder="Unesite datum rodjenja" name="email" required>
+
+                <label for="psw"><b>Gmail</b></label>
+                <input type="text" placeholder="Unesite gmail" name="psw" required>
+            </div>
+            <button type="submit" class="btn">Register</button>
+            <button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
+        </form>
+    </div>
+
+    <div class="form-popup" id="myForm3">
+        <form action="/action_page.php" class="form-container">
+            <button type="button" class="btn cancel" onclick="openForm()">Login</button>
+            <button type="button" class="btn cancel" onclick="openForm2()">Register</button>
+            <button type="button" class="btn cancel" onclick="closeForm3()">Close</button>
+        </form>
+    </div>
+    <script src="funkcije.js"></script>
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+
+input[type=text], select {
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+input[type=submit] {
+width: 200px;
+background-color: rgba(255, 255, 255, 0.1);
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+box-shadow: 8px 9px 6px -6px rgb(19, 0, 0);
+
+}
+
+input[type=submit]:hover {
+background-color:rgba(255, 255, 255, 0.3);
+}
+
+textarea{
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.9);
+}

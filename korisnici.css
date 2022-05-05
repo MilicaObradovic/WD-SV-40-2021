@@ -1,0 +1,35 @@
+table {
+    margin-top: 5%;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    color: rgba(0, 0, 0, 0.7);
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+
+/* tr:hover {background-color: rgba(255, 255, 255, 0.4);} */
+
+.stranica{
+    margin: auto;
+    /* width: 700px; */
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 8px 9px 6px -6px rgb(41, 0, 0);
+}
+
+a{
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(0, 0, 0);
+}
+
+@media screen and (min-width: 1200px) {
+    .stranica{
+        width:40%;
+    }
+  }

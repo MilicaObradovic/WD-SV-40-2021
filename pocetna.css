@@ -1,0 +1,54 @@
+.stranica{
+    margin: auto;
+    /* width: 80%; */
+}
+.pocetna-slika{
+    z-index: -1;
+    width: 100%;
+    display: block;
+    /* margin-top: 7%; */
+}
+.sekcija{
+    margin: auto;
+    /* vertical-align: middle; */
+    width: 90%;
+    padding: 20px;
+    background-color: rgba(63, 0, 0, 0.85);
+    box-shadow: 8px 9px 6px -6px rgb(41, 0, 0);
+    color: rgb(255, 255, 255);
+    margin-top: 10%;
+}
+
+.slika{
+    padding: 0px 0px;
+    width: 200px;
+}
+
+.pozoriste, .text{
+    display: inline-block;
+}
+
+.pozoriste{
+    /* width: 400px; */
+    width:100%
+}
+
+.text{
+    padding: 2%;
+}
+
+.predstave{
+    background-color: rgba(40, 0, 0, 0.85);
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+    box-shadow: 8px 9px 6px -6px rgb(19, 0, 0);
+}
+
+@media screen and (max-width: 768px) {
+    .sekcija{
+        width: 100%;
+    }
+  }
+
+
