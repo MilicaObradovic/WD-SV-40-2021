@@ -1,16 +1,13 @@
 .stranica{
     margin: auto;
-    /* width: 80%; */
 }
 .pocetna-slika{
     z-index: -1;
     width: 100%;
     display: block;
-    /* margin-top: 7%; */
 }
 .sekcija{
     margin: auto;
-    /* vertical-align: middle; */
     width: 90%;
     padding: 20px;
     background-color: rgba(63, 0, 0, 0.85);
@@ -29,7 +26,6 @@
 }
 
 .pozoriste{
-    /* width: 400px; */
     width:100%
 }
 
@@ -50,5 +46,3 @@
         width: 100%;
     }
   }
-
-
