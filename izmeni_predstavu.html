@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="sr">
 
 <head>
     <title>Izmena predstave</title>
@@ -37,12 +37,12 @@
                             Predstave
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="pozoriste1.html">Srpsko narodno pozoriste</a></li>
-                            <li><a class="dropdown-item" href="#">Pozoriste mladih</a></li>
+                            <li><a class="dropdown-item" href="pozoriste1.html">Srpsko narodno pozorište</a></li>
+                            <li><a class="dropdown-item" href="#">Pozorište mladih</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Narodno poozoriste Nis</a></li>
+                            <li><a class="dropdown-item" href="#">Narodno poozorište Niš</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -64,7 +64,7 @@
         <form>
             <div class="row">
                 <div class="form-group col-md-8 col-lg-9 prvi">
-                    <label for="fname">Izmenite detaljan opis:</label><br>
+                    <label>Izmenite detaljan opis:</label><br>
                     <textarea class="form-control" name="message" rows="25" cols="70">Алексис Зорбас и Ник, млади писац, срели су се први пут у луци Пиреј. Ник је намеравао да одржи стари запуштени рудник. У ствари, био је то разочаран млад човек који је желео да на острву, међу људима из другачијег света, пронађе свој мир. Зорба је био по свему другачији.
             Сањар, луталица, волео је живот, пиће, жене – филозофијом човека који је упознао све стране живота носио се са невољама, туђим и својим. Увек је био на страни оних који пате, умео је да се жртвује за друге… Пошто је Зорба радио и рударски посао, Ник га је узео за надзорника радника на Криту. Зорба и Ник крећу заједно на Крит. Тако је све почело.
             На сеоском тргу, на обали мора, младеж се забавља и плеше. Ту је и млада удовица Марина, која привлачи пажњу мештана. Већина мушкараца тајно чезне за њом, а најжешће Павлос, син богатог пастира, који је лудо заљубљен и љубоморан. Удовица му, пак, ни мало не узвраћа наклоност. Дошљаци Зорба и Ник појављују се на тргу, представљају се мештанима сваки на свој начин. Сусрећу мадам Ортанс, Францускињу, власницу скромног пансиона. Она их прима у свој дом који, код мештана, није на добром гласу. Мадам Ортанс, некадашња париска певачица и играчица, бурне прошлости, сада уморна од свега и болесна, проводи дане на Криту у сећању на минули живот. Зорба и Ник плешу са мадам Ортанс. Привлачност између Зорбе и мадам Ортанс је очигледна. Никову пажњу привлачи случајни сусрет са удовицом Марином која својим понашањем и презиром према обичајима свога краја изазива револт мештана. 
@@ -73,27 +73,27 @@
                 </div>
                 <div class="drugi col-md-4 col-lg-3">
                     <div class="form-group">
-                        <label for="fname">Izmenite naziv:</label><br>
+                        <label>Izmenite naziv:</label><br>
                         <input type="text" value="Grk zorba"><br>
                     </div>
                     <div class="form-group">
-                        <label for="fname">Izmenite zanr:</label><br>
+                        <label>Izmenite zanr:</label><br>
                         <input type="text" value="drama"><br>
                     </div>
                     <div class="form-group">
-                        <label for="lname">Izmenite trajanje:</label><br>
+                        <label>Izmenite trajanje:</label><br>
                         <input type="text" value="180min"><br>
                     </div>
                     <div class="form-group">
-                        <label for="fname">Izmenite cenu:</label><br>
+                        <label>Izmenite cenu:</label><br>
                         <input type="text" value="600din"><br>
                     </div>
                     <div class="form-group">
-                        <label for="lname">Izmenite kod:</label><br>
+                        <label>Izmenite kod:</label><br>
                         <input type="text" value="000001"><br>
                     </div>
                     <div class="form-group">
-                        <label for="fname">Izmenite maks br. osoba:</label><br>
+                        <label>Izmenite maks br. osoba:</label><br>
 
                         <input type="text" value="100"><br><br>
                     </div>
@@ -109,13 +109,13 @@
         <button id="dugme2" class="open-button2 d-none d-sm-block" onclick="openForm2()">Register</button>
     </div>
     <div class="form-popup" id="myForm">
-        <form action="/action_page.php" class="form-container">
+        <form class="form-container">
             <h1>Login</h1>
 
-            <label for="email"><b>Korisnicko ime</b></label>
-            <input type="text" placeholder="Unesite korisnicko ime" name="email" required>
+            <label><b>Korisnicko ime</b></label>
+            <input type="text" placeholder="Unesite korisnicko ime" name="korisnicko_ime" required>
 
-            <label for="psw"><b>Lozinka</b></label>
+            <label><b>Lozinka</b></label>
             <input type="text" placeholder="Unesite lozinku" name="psw" required>
 
             <button type="submit" class="btn">Login</button>
@@ -124,32 +124,32 @@
     </div>
 
     <div class="form-popup2" id="myForm2">
-        <form action="/action_page.php" class="form-container2">
+        <form class="form-container2">
             <h1>Register</h1>
             <div class="first">
-                <label for="email"><b>Korisnick ime</b></label>
+                <label><b>Korisnick ime</b></label>
                 <input type="text" placeholder="Unesite korisnicko ime" name="email" required>
 
-                <label for="psw"><b>Lozinka</b></label>
+                <label><b>Lozinka</b></label>
                 <input type="text" placeholder="Unesite lozinku" name="psw" required>
 
-                <label for="email"><b>Ime</b></label>
+                <label><b>Ime</b></label>
                 <input type="text" placeholder="Unesite ime" name="email" required>
 
-                <label for="psw"><b>Prezime</b></label>
+                <label><b>Prezime</b></label>
                 <input type="text" placeholder="Unesite prezime" name="psw" required>
             </div>
             <div class="second">
-                <label for="email"><b>Telefon</b></label>
+                <label><b>Telefon</b></label>
                 <input type="text" placeholder="Unesite telefon" name="email" required>
 
-                <label for="psw"><b>Adresa</b></label>
+                <label><b>Adresa</b></label>
                 <input type="text" placeholder="Unesite adresu" name="psw" required>
 
-                <label for="email"><b>Datum rodjenja</b></label>
+                <label><b>Datum rodjenja</b></label>
                 <input type="text" placeholder="Unesite datum rodjenja" name="email" required>
 
-                <label for="psw"><b>Gmail</b></label>
+                <label><b>Gmail</b></label>
                 <input type="text" placeholder="Unesite gmail" name="psw" required>
             </div>
             <button type="submit" class="btn">Register</button>
@@ -158,7 +158,7 @@
     </div>
 
     <div class="form-popup" id="myForm3">
-        <form action="/action_page.php" class="form-container">
+        <form class="form-container">
             <button type="button" class="btn cancel" onclick="openForm()">Login</button>
             <button type="button" class="btn cancel" onclick="openForm2()">Register</button>
             <button type="button" class="btn cancel" onclick="closeForm3()">Close</button>

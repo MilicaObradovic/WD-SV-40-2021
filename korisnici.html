@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="sr">
 
 <head>
     <title>Korisnici</title>
@@ -104,13 +104,13 @@
         <button id="dugme2" class="open-button2 d-none d-sm-block" onclick="openForm2()">Register</button>
     </div>
     <div class="form-popup" id="myForm">
-        <form action="/action_page.php" class="form-container">
+        <form class="form-container">
             <h1>Login</h1>
 
-            <label for="email"><b>Korisnicko ime</b></label>
-            <input type="text" placeholder="Unesite korisnicko ime" name="email" required>
+            <label><b>Korisnicko ime</b></label>
+            <input type="text" placeholder="Unesite korisnicko ime" name="korisnicko_ime" required>
 
-            <label for="psw"><b>Lozinka</b></label>
+            <label><b>Lozinka</b></label>
             <input type="text" placeholder="Unesite lozinku" name="psw" required>
 
             <button type="submit" class="btn">Login</button>
@@ -119,32 +119,32 @@
     </div>
 
     <div class="form-popup2" id="myForm2">
-        <form action="/action_page.php" class="form-container2">
+        <form class="form-container2">
             <h1>Register</h1>
             <div class="first">
-                <label for="email"><b>Korisnick ime</b></label>
+                <label><b>Korisnick ime</b></label>
                 <input type="text" placeholder="Unesite korisnicko ime" name="email" required>
 
-                <label for="psw"><b>Lozinka</b></label>
+                <label><b>Lozinka</b></label>
                 <input type="text" placeholder="Unesite lozinku" name="psw" required>
 
-                <label for="email"><b>Ime</b></label>
+                <label><b>Ime</b></label>
                 <input type="text" placeholder="Unesite ime" name="email" required>
 
-                <label for="psw"><b>Prezime</b></label>
+                <label><b>Prezime</b></label>
                 <input type="text" placeholder="Unesite prezime" name="psw" required>
             </div>
             <div class="second">
-                <label for="email"><b>Telefon</b></label>
+                <label><b>Telefon</b></label>
                 <input type="text" placeholder="Unesite telefon" name="email" required>
 
-                <label for="psw"><b>Adresa</b></label>
+                <label><b>Adresa</b></label>
                 <input type="text" placeholder="Unesite adresu" name="psw" required>
 
-                <label for="email"><b>Datum rodjenja</b></label>
+                <label><b>Datum rodjenja</b></label>
                 <input type="text" placeholder="Unesite datum rodjenja" name="email" required>
 
-                <label for="psw"><b>Gmail</b></label>
+                <label><b>Gmail</b></label>
                 <input type="text" placeholder="Unesite gmail" name="psw" required>
             </div>
             <button type="submit" class="btn">Register</button>
@@ -153,7 +153,7 @@
     </div>
 
     <div class="form-popup" id="myForm3">
-        <form action="/action_page.php" class="form-container">
+        <form class="form-container">
             <button type="button" class="btn cancel" onclick="openForm()">Login</button>
             <button type="button" class="btn cancel" onclick="openForm2()">Register</button>
             <button type="button" class="btn cancel" onclick="closeForm3()">Close</button>
