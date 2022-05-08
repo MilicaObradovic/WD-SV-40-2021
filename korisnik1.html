@@ -59,21 +59,71 @@
     <div class="zaglavlje">
         <h1>Profil</h1>
     </div>
-    <div class="container-sm korisnik">
-        <div class="row">
-            <div class="col-sm-6"><img class="user-slika" src="slike/user.png" alt="Flowers in Chania"></div>
-            <div class="col-sm-6 unutrasnje">
-                <h2>Petar Mirkovic</h2>
-                <p>Korisnicko ime: PetarMirkovic</p>
-                <p>Gmail: mirkovic.p@gmail.com</p>
-                <p>Telefon: 0655541378</p>
-                <p>Datum rodjenja: 28.9.1989.</p>
-                <p>Adresa: Bulevar Kralja Milana 9</p>
-                <p>Lozinka: JaSamCar2</p>
-                <h3 class="izmeni"><a href="korisnik_izmeni.html">Izmeni</a></h3>
+
+    <section class="vh-100">
+        <div class="container py-5">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col col-lg-6 mb-4 mb-lg-0">
+                    <div class="card mb-3" style="border-radius: .5rem;">
+                        <div class="row g-0">
+                            <div class="col-md-4 gradient-custom text-center text-white"
+                                style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                                <img src="slike/user5.png" alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+                                <h5>Petar Mirkovic</h5>
+                                <p>mirzaPerovic</p>
+                                <i class="far fa-edit mb-5"></i>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body p-4">
+                                    <h6>Nalog</h6>
+                                    <hr class="mt-0 mb-4">
+                                    <div class="row pt-1">
+                                        <div class="col-6 mb-3">
+                                            <h6>Korisnicko ime</h6>
+                                            <p class="text-muted">mirzaPerovic</p>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <h6>Lozinka</h6>
+                                            <p class="text-muted">JaSamCar2</p>
+                                        </div>
+                                    </div>
+                                    <h6>Podaci</h6>
+                                    <hr class="mt-0 mb-4">
+                                    <div class="row pt-1">
+                                        <div class="col-6 mb-3">
+                                            <h6>Gmail</h6>
+                                            <p class="text-muted">mirkovic.p@gmail.com</p>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <h6>Telefon</h6>
+                                            <p class="text-muted">0655541378</p>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <h6>Adresa</h6>
+                                            <p class="text-muted">Bulevar Kralja Milana 9</p>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <h6>Datum rodjenja</h6>
+                                            <p class="text-muted">28.9.1989.</p>
+                                        </div>
+                                        <div class="desno-button">
+                                            <p class="detaljnije"><a href="korisnik_izmeni.html">Izmeni profil</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-start">
+                                        <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
+                                        <a href="#!"><i class="fab fa-twitter fa-lg me-3"></i></a>
+                                        <a href="#!"><i class="fab fa-instagram fa-lg"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div><br><br>
+    </section>
+
 
     <div class="buttons">
         <button id="dugme" class="open-button d-none d-sm-block" onclick="openForm()">Login</button>

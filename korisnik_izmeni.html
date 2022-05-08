@@ -58,29 +58,41 @@
         </div>
     </nav>
     <div class="zaglavlje">
-        <h1>Profil izmeni</h1>
+        <h1>Izmena profila</h1>
     </div>
-    <div class=" container-sm korisnik">
-        <div class="unutrasnje">
-            <label>Izmenite ime:</label><br>
-            <input type="text" value="Petar"><br>
-            <label>Izmenite prezime:</label><br>
-            <input type="text" value="Mirkovic"><br>
-            <label>Izmenite korisnicko ime:</label><br>
-            <input type="text" value="PetarMirkovic"><br>
-            <label>Izmenite gmail:</label><br>
-            <input type="text" value="mirkovic.p@gmail.com"><br>
-            <label>Izmenite telefon:</label><br>
-            <input type="text" value="0655541378"><br>
-            <label>Izmenite datum rodjenja:</label><br>
-            <input type="text" value="28.9.1989."><br>
-            <label>Izmenite adresu:</label><br>
-            <input type="text" value="Bulevar Kralja Milana 9"><br>
-            <label>Izmenite lozinku:</label><br>
-            <input type="text" value="JaSamCar2"><br><br>
-            <input type="submit" value="Submit">
-        </div>
-    </div><br><br>
+
+    <div class="container-md ">
+        <form class="form-container3">
+            <h1>Izmeni podatke</h1>
+            <div class="first">
+                <label><b>Korisnicko ime</b></label>
+                <input type="text" value="mirzaPerovic" name="email" required>
+
+                <label><b>Lozinka</b></label>
+                <input type="text" value="JaSamCar2" name="psw" required>
+
+                <label><b>Ime</b></label>
+                <input type="text" value="Petar" name="email" required>
+
+                <label><b>Prezime</b></label>
+                <input type="text" value="Mirkovic" name="psw" required>
+            </div>
+            <div class="second">
+                <label><b>Telefon</b></label>
+                <input type="text" value="0655541378" name="email" required>
+
+                <label><b>Adresa</b></label>
+                <input type="text" value="Bulevar Kralja Milana 9" name="psw" required>
+
+                <label><b>Datum rodjenja</b></label>
+                <input type="text" value="28.9.1989." name="email" required>
+
+                <label><b>Gmail</b></label>
+                <input type="text" value="mirkovic.p@gmail.com" name="psw" required>
+            </div>
+            <button type="submit" class="btn">Izmeni</button>
+        </form>
+    </div>
 
     <div class="buttons">
         <button id="dugme" class="open-button d-none d-sm-block" onclick="openForm()">Login</button>

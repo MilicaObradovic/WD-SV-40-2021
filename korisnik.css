@@ -27,6 +27,7 @@
     padding: 2%;
     margin: auto;
     width: 50%;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 @media screen and (min-width: 1300px) {
@@ -39,4 +40,45 @@
     .korisnik{
         width:50%;
     }
+}
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: rgba(40, 0, 0, 0.9);
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right bottom, rgba(80, 0, 0, 0.9), rgba(50, 0, 0, 0.9));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right bottom, #ca7c7c, #3f0d12)
+    }
+
+.card{
+    border-color: rgba(112, 46, 46, 0.9);
+}
+.card-body{
+    background-color: rgba(250, 183, 183, 0.431);
+    
+}
+
+.text-muted{
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.card{
+    position: static;
+    display: block;
+}
+
+.detaljnije{
+    background-color: rgba(40, 0, 0, 0.85);
+    padding: 8px;
+    width: 50%;
+    text-align: center;
+    box-shadow: 8px 9px 6px -6px rgb(19, 0, 0);
+}
+
+.detaljnije a{
+    color: white;
+    text-decoration: none;
 }

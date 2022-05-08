@@ -70,10 +70,14 @@ li a:hover{
   color: white;
 }
 .zaglavlje{
-  background: rgba(0, 0, 0, 0.7);
-  color: rgb(255, 255, 255);
+  background-color: rgba(40, 0, 0, 0.9);
+  /* background-color: rgba(63, 0, 0.7); */
+  /* position: sticky;  */
+  /* top: 135px;  */
+  color: rgba(255, 255, 255, 0.8);
   width: 100%;
   text-align: center;
+  /* z-index: 0; */
 }
 
 h3 a {
@@ -84,7 +88,9 @@ h3 a:hover{
 color: white;
 }
 
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 h1{
   padding: 20px;
 }
@@ -193,7 +199,7 @@ h1{
   background-color: rgb(63, 0, 0);
 }
 .dropdown-menu{
-  background-color: rgba(63, 0, 0, 0.9);
+  background-color: rgb(63, 0, 0);
 }
 
 .dropdown-item{
@@ -211,7 +217,6 @@ h1{
       font-size:25px;
   }
 }
-
 @media screen and (max-width: 1200px) {
   h2{
       font-size:25px;
@@ -219,6 +224,35 @@ h1{
   h3{
       font-size:20px;
   }
+}
+@media screen and (max-width: 576px) {
+  h1{
+    font-size:25px;
+    padding: 10px;
+  }
+  .first, .second{
+    display: block;
+    width: 100%;
+    padding: 5px;
+  }
+  .form-popup, .form-popup2{
+    right:0px
+  }
+  .form-container input[type=text],.form-container2 input[type=text]{
+    padding: 8px;
+    margin: 3px 0 11px 0;
+  }
+  .form-container .btn, .form-container2 .btn{
+    padding: 8px 10px;
+    margin-bottom:5px;
+  }
+  .form-popup2{
+    overflow: scroll;
+    max-height: 400px;
+  }
+}
+.dropdown-menu{
+  z-index: 1;
 }
 
 .buttons{

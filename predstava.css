@@ -21,5 +21,18 @@
     padding: 20px;
     background-color: rgba(19, 0, 0, 0.5);
     box-shadow: 8px 9px 6px -6px rgb(41, 0, 0);
-    color: rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0.8);
 }
+h1{
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 576px) {
+    .predstava{
+        width: 100%;
+    }
+    .pocetna-slika{
+        width: 100%;
+    }
+    
+  }
