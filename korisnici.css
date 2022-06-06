@@ -50,6 +50,29 @@ a:hover{
     color: rgba(255, 255, 255, 0.8);
 }
 
+.veliko{
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.malo{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.mini-korisnik{
+    margin: auto;
+    margin-top: 10%;
+    width: 100%;
+    /* padding: 20px; */
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: rgba(19, 0, 0, 0.5);
+    box-shadow: 8px 9px 6px -6px rgb(41, 0, 0);
+    color: rgba(255, 255, 255, 0.8);
+}
+
 @media screen and (max-width: 576px) {
     h1{
         margin-bottom: 0;
@@ -57,5 +80,23 @@ a:hover{
 
     .container-sm , .mt-3, .stranica{
         margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 371px) {
+    .page-header{
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .stranica{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 390px) {
+    .mini-table{
+        display: none;
     }
 }

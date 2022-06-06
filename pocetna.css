@@ -47,3 +47,11 @@
         width: 100%;
     }
   }
+  @media screen and (max-width: 371px) {
+    .pocetna-slika{
+        margin-top: 40px;
+    }
+    .predstave{
+        width: 80%;
+    }
+}

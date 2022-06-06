@@ -2,6 +2,9 @@
     margin: auto;
     text-align: center;
 }
+.profil-text{
+    color: rgba(0, 0, 0, 0.7);
+}
 
 .user-slika{
     width: 100%;
@@ -44,17 +47,11 @@
 
 .gradient-custom {
     /* fallback for old browsers */
-    background: rgba(40, 0, 0, 0.9);
-    
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right bottom, rgba(80, 0, 0, 0.9), rgba(50, 0, 0, 0.9));
-    
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right bottom, #ca7c7c, #3f0d12)
+    background: rgb(50, 0, 0);
     }
 
 .card{
-    border-color: rgba(112, 46, 46, 0.9);
+    border-color: rgb(47, 0, 0);
 }
 .card-body{
     background-color: rgba(250, 183, 183, 0.431);
@@ -71,14 +68,21 @@
 }
 
 .detaljnije{
-    background-color: rgba(40, 0, 0, 0.85);
+    background: rgb(50, 0, 0);
     padding: 8px;
     width: 50%;
     text-align: center;
+    color: white;
     box-shadow: 8px 9px 6px -6px rgb(19, 0, 0);
 }
 
 .detaljnije a{
     color: white;
     text-decoration: none;
+}
+
+@media screen and (max-width: 371px) {
+    .page-header{
+        margin-top: 40px;
+    }
 }

@@ -1,12 +1,19 @@
 .predstava{
     margin: auto;
-    width: 90%;
+    width: 70%;
     padding: 20px;
     background-color: rgba(63, 0, 0, 0.7);
     box-shadow: 8px 9px 6px -6px rgb(41, 0, 0);
     color: rgba(255, 255, 255, 0.8);
     margin-top: 5%;
 }
+
+/* .predstava2{
+    margin: auto;
+    width: 80%;
+    padding: 20px;
+    color: rgba(255, 255, 255, 0.8);
+} */
 
 .slika, .text{
     display: inline-block;
@@ -32,4 +39,26 @@
     width: 700px;
 }
 
+@media screen and (max-width: 770px) {
+    .predstava{
+        width: 100%;
+        margin-bottom: 5%;
+        padding: 10px;
+    }
+    .container{
+        padding: 0px;
+    }
 
+}
+
+@media screen and (max-width: 371px) {
+    .page-header{
+        margin-top: 40px;
+    }
+    .slika{
+        width: 100%;
+    }
+    .detaljnije{
+        width: 80%;
+    }
+}

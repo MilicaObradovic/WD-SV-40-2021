@@ -27,6 +27,9 @@ h1{
     margin-bottom: 0;
 }
 
+/* .container{
+    width: 100%;
+} */
 @media screen and (max-width: 576px) {
     .predstava{
         width: 100%;
@@ -36,3 +39,9 @@ h1{
     }
     
   }
+
+  @media screen and (max-width: 371px) {
+    .page-header{
+        margin-top: 40px;
+    }
+}

@@ -28,6 +28,12 @@
         width:35%;
     }
 }
+@media screen and (max-width: 371px) {
+  .page-header{
+      margin-top: 40px;
+  }
+}
+
 
 
 .gradient-custom {
@@ -62,17 +68,19 @@
 .form-container3 {
     border-radius: 10px;
     margin: auto;
-    background-color: rgb(214, 181, 181);
+    /* background-color: rgb(214, 181, 181); */
+    background: rgb(50, 0, 0);
     max-width: 600px;
     padding: 10px;
+    color: rgba(255, 255, 255, 0.9);
   }
   
   .form-container3 input[type=text]{
     padding: 15px;
     margin: 5px 0 22px 0;
     border: none;
-    background: rgba(255, 255, 255, 0.9);
-    color: rgba(30, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.85);
+    color: black
   }
   
   .form-container3 input[type=text]{
@@ -80,7 +88,7 @@
   }
   
  .form-container3 .btn{
-    background-color:rgb(30, 0, 0);
+    background-color:rgba(255, 255, 255, 0.1);
     color: white;
     padding: 16px 20px;
     border: none;
