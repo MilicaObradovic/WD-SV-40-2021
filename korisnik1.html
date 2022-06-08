@@ -66,31 +66,31 @@
                 <div class="col col-lg-6 mb-4 mb-lg-0">
                     <div class="card mb-3" style="border-radius: .5rem;">
                         <div class="row g-0">
-                            <div class="col-md-4 gradient-custom text-center text-white"
+                            <div id="head" class="col-md-4 gradient-custom text-center text-white"
                                 style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
                                 <img src="slike/user2.png" alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
-                                <h5>Petar Mirkovic</h5>
+                                <!-- <h5>Petar Mirkovic</h5>
                                 <p>mirzaPerovic</p>
-                                <i class="far fa-edit mb-5"></i>
+                                <i class="far fa-edit mb-5"></i> -->
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body p-4">
                                     <h6>Nalog</h6>
                                     <hr class="mt-0 mb-4">
-                                    <div class="row pt-1">
-                                        <div class="col-12 col-sm-6 mb-3">
+                                    <div id="nalog" class="row pt-1">
+                                        <!-- <div class="col-12 col-sm-6 mb-3">
                                             <h6>Korisnicko ime</h6>
                                             <p class="profil-text">mirzaPerovic</p>
                                         </div>
                                         <div class="col-12 col-sm-6  mb-3">
                                             <h6>Lozinka</h6>
                                             <p class="profil-text">JaSamCar2</p>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <h6>Podaci</h6>
                                     <hr class="mt-0 mb-4">
-                                    <div class="row pt-1">
-                                        <div class="col-12 col-sm-6  mb-3">
+                                    <div id="podaci" class="row pt-1">
+                                        <!-- <div class="col-12 col-sm-6  mb-3">
                                             <h6>Gmail</h6>
                                             <p class="profil-text">mirkovic.p@gmail.com</p>
                                         </div>
@@ -108,13 +108,13 @@
                                         </div>
                                         <div class="desno-button">
                                             <p class="detaljnije"><a href="korisnik_izmeni.html">Izmeni profil</a></p>
-                                        </div>
+                                        </div> -->
                                     </div>
-                                    <div class="d-flex justify-content-start">
+                                    <!-- <div class="d-flex justify-content-start">
                                         <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
                                         <a href="#!"><i class="fab fa-twitter fa-lg me-3"></i></a>
                                         <a href="#!"><i class="fab fa-instagram fa-lg"></i></a>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -162,16 +162,16 @@
             </div>
             <div class="second">
                 <label><b>Telefon</b></label>
-                <input type="text" placeholder="Unesite telefon" name="email" required>
+                <input type="tel" id="phone" placeholder="Unesite telefon" name="phone" pattern="[0-9]{10}" required>
 
                 <label><b>Adresa</b></label>
                 <input type="text" placeholder="Unesite adresu" name="psw" required>
 
                 <label><b>Datum rodjenja</b></label>
-                <input type="text" placeholder="Unesite datum rodjenja" name="email" required>
+                <input type="date" name="bday" required>
 
                 <label><b>Gmail</b></label>
-                <input type="text" placeholder="Unesite gmail" name="psw" required>
+                <input type="email" placeholder="Unesite gmail" name="psw" required>
             </div>
             <button type="submit" class="btn">Register</button>
             <button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
@@ -187,6 +187,7 @@
     </div>
 
     <script src="funkcije.js"></script>
+    <script src="korisnik.js"></script>
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

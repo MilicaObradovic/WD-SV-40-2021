@@ -34,56 +34,21 @@
   }
 }
 
-
-
-.gradient-custom {
-    /* fallback for old browsers */
-    background: rgba(40, 0, 0, 0.9);
-    
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right bottom, rgba(80, 0, 0, 0.9), rgba(50, 0, 0, 0.9));
-    
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right bottom, #ca7c7c, #3f0d12)
-    }
-
-.card{
-    border-color: rgba(112, 46, 46, 0.9);
-}
-.card-body{
-    background-color: rgba(250, 183, 183, 0.431);
-    
-}
-
-.text-muted{
-    color: rgba(0, 0, 0, 0.6);
-}
-
-.card{
-    position: static;
-    display: block;
-}
-
-
 .form-container3 {
     border-radius: 10px;
     margin: auto;
-    /* background-color: rgb(214, 181, 181); */
-    background: rgb(50, 0, 0);
+    background: rgb(55, 0, 0);
     max-width: 600px;
     padding: 10px;
     color: rgba(255, 255, 255, 0.9);
   }
   
-  .form-container3 input[type=text]{
+  .form-container3 input[type=text], .form-container3 input[type=date], .form-container3 input[type=tel], .form-container3 input[type=email]{
     padding: 15px;
     margin: 5px 0 22px 0;
     border: none;
     background: rgba(255, 255, 255, 0.85);
-    color: black
-  }
-  
-  .form-container3 input[type=text]{
+    color: black;
     width: 100%;
   }
   
@@ -114,7 +79,7 @@
       width: 100%;
       padding: 5px;
     }
-    .form-container3 input[type=text]{
+    .form-container3 input[type=text], .form-container3 input[type=date], .form-container3 input[type=tel], .form-container3 input[type=email]{
       padding: 8px;
       margin: 3px 0 11px 0;
     }

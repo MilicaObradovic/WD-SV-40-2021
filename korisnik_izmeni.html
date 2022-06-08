@@ -79,16 +79,18 @@
             </div>
             <div class="second">
                 <label><b>Telefon</b></label>
-                <input type="text" value="0655541378" name="email" required>
+                <!-- <input type="text" value="0655541378" name="email" required> -->
+                <input type="tel" id="phone" value="0655541378" name="phone"pattern="[0-9]{10}" required>
 
                 <label><b>Adresa</b></label>
                 <input type="text" value="Bulevar Kralja Milana 9" name="psw" required>
 
                 <label><b>Datum rodjenja</b></label>
-                <input type="text" value="28.9.1989." name="email" required>
+                <!-- <input type="text" value="28.9.1989." name="email" required> -->
+                <input type="date" value="1989-09-28" name="bday" required>
 
                 <label><b>Gmail</b></label>
-                <input type="text" value="mirkovic.p@gmail.com" name="psw" required>
+                <input type="email" value="mirkovic.p@gmail.com" name="psw" required>
             </div>
             <button type="submit" class="btn">Izmeni</button>
         </form>
@@ -131,16 +133,16 @@
             </div>
             <div class="second">
                 <label><b>Telefon</b></label>
-                <input type="text" placeholder="Unesite telefon" name="email" required>
+                <input type="tel" id="phone" placeholder="Unesite telefon" name="phone"pattern="[0-9]{10}" required>
 
                 <label><b>Adresa</b></label>
                 <input type="text" placeholder="Unesite adresu" name="psw" required>
 
                 <label><b>Datum rodjenja</b></label>
-                <input type="text" placeholder="Unesite datum rodjenja" name="email" required>
+                <input type="date" name="bday" required>
 
                 <label><b>Gmail</b></label>
-                <input type="text" placeholder="Unesite gmail" name="psw" required>
+                <input type="email" placeholder="Unesite gmail" name="psw" required>
             </div>
             <button type="submit" class="btn">Register</button>
             <button type="button" class="btn cancel" onclick="closeForm2()">Close</button>

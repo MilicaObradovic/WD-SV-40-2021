@@ -41,22 +41,53 @@ color: rgba(255, 255, 255, 0.8);
     border: none;
 }
 
+td .btn{
+    background-color:rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 8px 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.9;
+}
+td .btn:hover{
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.mini-korisnik .btn{
+    background-color:rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 8px 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.9;
+}
+.mini-korisnik .btn:hover{
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* 
 .dalje:hover{
     background-color: #b89393;
     color: rgba(255, 255, 255, 0.8);
-}
+} */
 
-a:hover{
+/* a:hover{
     color: rgba(255, 255, 255, 0.8);
-}
+} */
 
 .veliko{
     font-size: 18px;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.92);
 }
 
 .malo{
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .mini-korisnik{

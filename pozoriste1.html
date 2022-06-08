@@ -56,15 +56,15 @@
             </div>
         </div>
     </nav>
-    <div class="page-header zaglavlje">
-        <h1>Srpsko narodno pozoriste</h1>
+    <div class="page-header zaglavlje" id="zaglavlje">
+        <!-- <h1>Srpsko narodno pozoriste</h1> -->
     </div>
-    <div class="container">
-        <div class="row predstava">
-            <div class=" col-lg-4 col-xl-3">
+    <div class="container" id="predstave">
+        <!-- <div class="row predstava">
+            <div class=" col-lg-4 col-xl-4">
                 <img class="slika" src="slike/predstava1.jpeg" alt="Flowers in Chania">
             </div>
-            <div class="text  col-lg-8 col-xl-9">
+            <div class="text  col-lg-8 col-xl-8">
                 <h2>Grk zorba</h2>
                 <p>Зорба је био по свему другачији.Сањар, луталица, волео је живот, пиће, жене –
                     филозофијом
@@ -75,24 +75,7 @@
                 <p>Cena: 600din</p>
                 <h3 class="detaljnije"><a href="predstava1.html">Detaljnije</a></h3>
             </div>
-        </div>
-
-        <div class="row predstava">
-            <div class=" col-lg-4 col-xl-3">
-                <img class="slika" src="slike/predstava1.jpeg" alt="Flowers in Chania">
-            </div>
-            <div class="text col-lg-8 col-xl-9">
-                <h2>Grk zorba</h2>
-                <p>Зорба је био по свему другачији.Сањар, луталица, волео је живот, пиће, жене –
-                    филозофијом
-                    човека који је упознао
-                    све стране живота носио се са невољама, туђим и својим...</p>
-                <p>Zanr: drama</p>
-                <p>Trajanje: 180min</p>
-                <p>Cena: 600din</p>
-                <h3 class="detaljnije"><a href="predstava1.html">Detaljnije</a></h3>
-            </div>
-        </div>
+        </div> -->
 
     </div><br><br>
     <div class="buttons">
@@ -132,16 +115,16 @@
             </div>
             <div class="second">
                 <label><b>Telefon</b></label>
-                <input type="text" placeholder="Unesite telefon" name="email" required>
+                <input type="tel" id="phone" placeholder="Unesite telefon" name="phone"pattern="[0-9]{10}" required>
 
                 <label><b>Adresa</b></label>
                 <input type="text" placeholder="Unesite adresu" name="psw" required>
 
                 <label><b>Datum rodjenja</b></label>
-                <input type="text" placeholder="Unesite datum rodjenja" name="email" required>
+                <input type="date" name="bday" required>
 
                 <label><b>Gmail</b></label>
-                <input type="text" placeholder="Unesite gmail" name="psw" required>
+                <input type="email" placeholder="Unesite gmail" name="psw" required>
             </div>
             <button type="submit" class="btn">Register</button>
             <button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
@@ -157,6 +140,7 @@
     </div>
 
     <script src="funkcije.js"></script>
+    <script src="pozoriste.js"></script>
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

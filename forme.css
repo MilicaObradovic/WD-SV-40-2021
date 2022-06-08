@@ -1,5 +1,5 @@
 
-input[type=text], select {
+input[type=text], select , input[type=number]{
     width: 200px;
     padding: 12px 20px;
     margin: 8px 0;
@@ -39,4 +39,13 @@ textarea{
 
 .form-control{
     background-color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width: 300px) {
+    input[type=text], select, input[type=number]{
+        width: 150px;
+    }
+    input[type=submit]{
+        width: 150px;
+    }
 }

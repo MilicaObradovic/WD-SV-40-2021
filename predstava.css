@@ -1,10 +1,22 @@
 .pocetna-slika{
-    width: 80%;
+    /* max-width: 350px;
+    max-height: 500px; */
+    /* background-color: rgba(19, 0, 0, 0.5); */
+    padding: 15px;
+    /* width: 20%;
+    height: auto; */
 }
 
-.pocetna{
-    margin: auto;
-    text-align: center;
+img.scale { object-fit: scale-down; }
+
+.row{
+    background-color: rgba(19, 0, 0, 0.5);
+}
+
+.pocetna{ 
+    /* margin: auto; */
+    /* text-align: center; */
+    /* max-width: 200px; */
 }
 
 .izmeni{
@@ -15,27 +27,53 @@
     box-shadow: 8px 9px 6px -6px rgb(19, 0, 0);
 }
 
+.opis{
+    padding: 30px;
+    /* background-color: rgba(19, 0, 0, 0.5); */
+    /* box-shadow: 8px 9px 6px -6px rgb(41, 0, 0); */
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* .pocetna, .predstava{
+    display: inline-block;
+} */
+
 .predstava{
     margin: auto;
-    width: 80%;
-    padding: 20px;
-    background-color: rgba(19, 0, 0, 0.5);
-    box-shadow: 8px 9px 6px -6px rgb(41, 0, 0);
-    color: rgba(255, 255, 255, 0.8);
+    /* margin-left: 50px;
+    margin-right: 100px; */
+    /* width: 100%; */
+    
 }
 h1{
     margin-bottom: 0;
 }
 
-/* .container{
+.predstava .btn{
+    background-color:rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
     width: 100%;
-} */
+    margin-bottom:10px;
+    opacity: 0.9;
+}
+.predstava .btn:hover{
+    opacity: 1;
+}
+
 @media screen and (max-width: 576px) {
     .predstava{
         width: 100%;
     }
     .pocetna-slika{
         width: 100%;
+        max-width: none;
+        max-height: none;
+    }
+    .opis{
+        padding: 10px;
     }
     
   }
@@ -44,4 +82,21 @@ h1{
     .page-header{
         margin-top: 40px;
     }
+    .izmeni{
+        width: 120px;
+    }
 }
+
+@media screen and (max-width: 1200px) {
+    .predstava{
+        width: 100%;
+        
+    }
+}
+
+/* @media screen and (max-width: 991px) {
+    .pocetna-slika{
+        background-color: rgba(19, 0, 0, 0.5); */
+        /* box-shadow: 8px 9px 6px -6px rgb(41, 0, 0); */
+    /* }
+} */

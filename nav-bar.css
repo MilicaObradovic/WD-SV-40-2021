@@ -147,21 +147,22 @@ h1{
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-.form-container input[type=text],.form-container2 input[type=text]{
+.form-container input[type=text],.form-container2 input[type=text],.form-container2 input[type=date],.form-container2 input[type=tel],.form-container2 input[type=email]{
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
   background: rgba(255, 255, 255, 0.9);
   color: rgba(30, 0, 0, 0.8);
+  width: 100%;
 }
 
-.form-container2 input[type=text]{
+/* .form-container2 input[type=text]{
   width: 100%;
 }
 
 .form-container input[type=text]{
   width: 100%;
-}
+} */
 
 .form-container input[type=text]:focus:focus {
   background-color: white;
@@ -241,7 +242,7 @@ h1{
   .form-popup, .form-popup2{
     right:0px
   }
-  .form-container input[type=text],.form-container2 input[type=text]{
+  .form-container input[type=text],.form-container2 input[type=text],.form-container2 input[type=date],.form-container2 input[type=tel],.form-container2 input[type=email]{
     padding: 8px;
     margin: 3px 0 11px 0;
   }

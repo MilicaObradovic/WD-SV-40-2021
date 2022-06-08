@@ -65,8 +65,8 @@
         <h1>Pocetna</h1>
     </div>
 
-    <div class="container">
-        <div class="row sekcija">
+    <div class="container" id="pozorista">
+        <!-- <div class="row sekcija">
             <div class="col-sm-12 col-lg-7 col-xl-6">
                 <img class="pozoriste img-responsive" src="slike/pozoriste1.jpeg" alt="Flowers in Chania">
             </div>
@@ -76,18 +76,7 @@
                 <p>Broj predstava: 30</p>
                 <h3 class="predstave"><a href="pozoriste1.html">Predstave</a></h3>
             </div><br><br>
-        </div>
-        <div class="row sekcija">
-            <div class="col-sm-12 col-lg-7 col-xl-6">
-                <img class="pozoriste img-responsive" src="slike/pozoriste1.jpeg" alt="Flowers in Chania">
-            </div>
-            <div class="text col-sm-12 col-lg-5 col-xl-6">
-                <h2>Srpsko narodno pozoriste</h2>
-                <p>Adresa: Pozorišni trg 1, Novi Sad 21000</p>
-                <p>Broj predstava: 30</p>
-                <h3 class="predstave"><a href="pozoriste1.html">Predstave</a></h3>
-            </div><br><br>
-        </div>
+        </div> -->
     </div><br><br>
     <div class="buttons">
         <button id="dugme" class="open-button d-none d-sm-block" onclick="openForm()">Login</button>
@@ -126,16 +115,16 @@
             </div>
             <div class="second">
                 <label><b>Telefon</b></label>
-                <input type="text" placeholder="Unesite telefon" name="email" required>
+                <input type="tel" id="phone" placeholder="Unesite telefon" name="phone"pattern="[0-9]{10}" required>
 
                 <label><b>Adresa</b></label>
                 <input type="text" placeholder="Unesite adresu" name="psw" required>
 
                 <label><b>Datum rodjenja</b></label>
-                <input type="text" placeholder="Unesite datum rodjenja" name="email" required>
+                <input type="date" name="bday" required>
 
                 <label><b>Gmail</b></label>
-                <input type="text" placeholder="Unesite gmail" name="psw" required>
+                <input type="email" placeholder="Unesite gmail" name="psw" required>
             </div>
             <button type="submit" class="btn">Register</button>
             <button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
@@ -150,6 +139,7 @@
         </form>
     </div>
     <script src="funkcije.js"></script>
+    <script src="pocetna.js"></script>
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

@@ -78,15 +78,23 @@
                     </div>
                     <div class="form-group">
                         <label>Izmenite zanr:</label><br>
-                        <input type="text" value="drama"><br>
+                        <!-- <input type="text" value="drama"><br> -->
+                        <select>
+                            <option value="drama">Drama</option>
+                            <option value="komedija">Komedija</option>
+                            <option value="tragikomedija">Tragikomedija</option>
+                            <option value="muzicka_parodija">Muzicka parodija</option>
+                            <option value="farsa">Farsa</option>
+                        </select><br/>
                     </div>
                     <div class="form-group">
                         <label>Izmenite trajanje:</label><br>
-                        <input type="text" value="180min"><br>
+                        <!-- <input type="text" value="180min"><br> -->
+                        <input type="number" id="quantity" name="quantity" min="0" max="250" step="30" value="180"><br>
                     </div>
                     <div class="form-group">
                         <label>Izmenite cenu:</label><br>
-                        <input type="text" value="600din"><br>
+                        <input type="number" id="quantity" name="quantity" min="0" max="4000" step="200" value="600"><br>
                     </div>
                     <div class="form-group">
                         <label>Izmenite kod:</label><br>
@@ -95,7 +103,7 @@
                     <div class="form-group">
                         <label>Izmenite maks br. osoba:</label><br>
 
-                        <input type="text" value="100"><br><br>
+                        <input type="number" id="quantity" name="quantity" min="0" max="300" step="50" value="200"><br><br>
                     </div>
                     <input class="btn btn-default" type="submit" value="Submit">
                 </div>
@@ -141,16 +149,16 @@
             </div>
             <div class="second">
                 <label><b>Telefon</b></label>
-                <input type="text" placeholder="Unesite telefon" name="email" required>
+                <input type="tel" id="phone" placeholder="Unesite telefon" name="phone"pattern="[0-9]{10}" required>
 
                 <label><b>Adresa</b></label>
                 <input type="text" placeholder="Unesite adresu" name="psw" required>
 
                 <label><b>Datum rodjenja</b></label>
-                <input type="text" placeholder="Unesite datum rodjenja" name="email" required>
+                <input type="date" name="bday" required>
 
                 <label><b>Gmail</b></label>
-                <input type="text" placeholder="Unesite gmail" name="psw" required>
+                <input type="email" placeholder="Unesite gmail" name="psw" required>
             </div>
             <button type="submit" class="btn">Register</button>
             <button type="button" class="btn cancel" onclick="closeForm2()">Close</button>

@@ -64,55 +64,27 @@
         <table class="table table-hover table-borderless ">
             <thead>
                 <tr>
-                    <th>#</th>
+                    <!-- <th>#</th> -->
                     <th>Ime</th>
                     <th>Prezime</th>
                     <th>Korisnicko ime</th>
                     <th></th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
+            <tbody id="tbody">
+                <!-- <tr>
                     <td>1</td>
                     <td>Petar</td>
                     <td>Mirkovic</td>
                     <td>mirzaPerovic</td>
                     <td><p class="dalje"><a href="korisnik1.html">Detaljnije</a></p></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>xxx</td>
-                    <td>xxx</td>
-                    <td>xxx</td>
-                    <td><p class="dalje"><a href="korisnik1.html">Detaljnije</a></p></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>yyy</td>
-                    <td>yyy</td>
-                    <td>yyy</td>
-                    <td><p class="dalje"><a href="korisnik1.html">Detaljnije</a></p></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>yyy</td>
-                    <td>yyy</td>
-                    <td>yyy</td>
-                    <td><p class="dalje"><a href="korisnik1.html">Detaljnije</a></p></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>yyy</td>
-                    <td>yyy</td>
-                    <td>yyy</td>
-                    <td><p class="dalje"><a href="korisnik1.html">Detaljnije</a></p></td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
     </div>
 
-    <div class="mini-table">
-        <div class="mini-korisnik">
+    <div class="mini-table" id="mini-table">
+        <!-- <div class="mini-korisnik">
             <p class="veliko">Ime</p>
             <p class="malo">Petar</p>
             <p class="veliko">Prezime</p>
@@ -120,43 +92,7 @@
             <p class="veliko">Korisnisko ime</p>
             <p class="malo">mirzaPerovic</p>
             <p class="dalje"><a href="korisnik1.html">Detaljnije</a></p>
-        </div>
-        <div class="mini-korisnik">
-            <p class="veliko">Ime</p>
-            <p class="malo">xxx</p>
-            <p class="veliko">Prezime</p>
-            <p class="malo">xxx</p>
-            <p class="veliko">Korisnisko ime</p>
-            <p class="malo">xxx</p>
-            <p class="dalje"><a href="korisnik1.html">Detaljnije</a></p>
-        </div>
-        <div class="mini-korisnik">
-            <p class="veliko">Ime</p>
-            <p class="malo">yyy</p>
-            <p class="veliko">Prezime</p>
-            <p class="malo">yyy</p>
-            <p class="veliko">Korisnisko ime</p>
-            <p class="malo">yyy</p>
-            <p class="dalje"><a href="korisnik1.html">Detaljnije</a></p>
-        </div>
-        <div class="mini-korisnik">
-            <p class="veliko">Ime</p>
-            <p class="malo">yyy</p>
-            <p class="veliko">Prezime</p>
-            <p class="malo">yyy</p>
-            <p class="veliko">Korisnisko ime</p>
-            <p class="malo">yyy</p>
-            <p class="dalje"><a href="korisnik1.html">Detaljnije</a></p>
-        </div>
-        <div class="mini-korisnik">
-            <p class="veliko">Ime</p>
-            <p class="malo">yyy</p>
-            <p class="veliko">Prezime</p>
-            <p class="malo">yyy</p>
-            <p class="veliko">Korisnisko ime</p>
-            <p class="malo">yyy</p>
-            <p class="dalje"><a href="korisnik1.html">Detaljnije</a></p>
-        </div>
+        </div>-->
     </div>
 
     <div class="buttons">
@@ -196,16 +132,16 @@
             </div>
             <div class="second">
                 <label><b>Telefon</b></label>
-                <input type="text" placeholder="Unesite telefon" name="email" required>
+                <input type="tel" id="phone" placeholder="Unesite telefon" name="phone"pattern="[0-9]{10}" required>
 
                 <label><b>Adresa</b></label>
                 <input type="text" placeholder="Unesite adresu" name="psw" required>
 
                 <label><b>Datum rodjenja</b></label>
-                <input type="text" placeholder="Unesite datum rodjenja" name="email" required>
+                <input type="date" name="bday" required>
 
                 <label><b>Gmail</b></label>
-                <input type="text" placeholder="Unesite gmail" name="psw" required>
+                <input type="email" placeholder="Unesite gmail" name="psw" required>
             </div>
             <button type="submit" class="btn">Register</button>
             <button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
@@ -221,6 +157,7 @@
     </div>
 
     <script src="funkcije.js"></script>
+    <script src="korisnici.js"></script>
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
