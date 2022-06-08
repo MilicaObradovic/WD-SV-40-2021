@@ -57,42 +57,49 @@
             </div>
         </div>
     </nav>
-    <div class="page-header zaglavlje">
-        <h1>Izmena profila</h1>
+    <div id="zaglavlje" class="page-header zaglavlje">
+        <!-- <h1>Izmena profila</h1> -->
     </div>
 
     <div class="container-md ">
-        <form class="form-container3">
+        <form id="sekcija" class="form-container3">
             <h1>Izmeni podatke</h1>
             <div class="first">
-                <label><b>Korisnicko ime</b></label>
-                <input type="text" value="mirzaPerovic" name="email" required>
+                <div id="korisnicko">
+                    <label><b>Korisnicko ime</b></label>
+                    <!-- <input type="text" value="mirzaPerovic" name="email" required> -->
+                </div>
 
-                <label><b>Lozinka</b></label>
-                <input type="text" value="JaSamCar2" name="psw" required>
+                <div id="lozinka"><label><b>Lozinka</b></label>
+                    <!-- <input type="text" value="JaSamCar2" name="psw" required> -->
+                </div>
 
-                <label><b>Ime</b></label>
-                <input type="text" value="Petar" name="email" required>
+                <div id="ime"><label><b>Ime</b></label>
+                    <!-- <input type="text" value="Petar" name="email" required> -->
+                </div>
 
-                <label><b>Prezime</b></label>
-                <input type="text" value="Mirkovic" name="psw" required>
+                <div id="prezime"><label><b>Prezime</b></label>
+                    <!-- <input type="text" value="Mirkovic" name="psw" required> -->
+                </div>
             </div>
             <div class="second">
-                <label><b>Telefon</b></label>
-                <!-- <input type="text" value="0655541378" name="email" required> -->
-                <input type="tel" id="phone" value="0655541378" name="phone"pattern="[0-9]{10}" required>
+                <div id="telefon"><label><b>Telefon</b></label>
+                    <!-- <input type="tel" id="phone" value="0655541378" name="phone" pattern="[0-9]{10}" required> -->
+                </div>
 
-                <label><b>Adresa</b></label>
-                <input type="text" value="Bulevar Kralja Milana 9" name="psw" required>
+                <div id="adresa"><label><b>Adresa</b></label>
+                    <!-- <input type="text" value="Bulevar Kralja Milana 9" name="psw" required> -->
+                </div>
 
-                <label><b>Datum rodjenja</b></label>
-                <!-- <input type="text" value="28.9.1989." name="email" required> -->
-                <input type="date" value="1989-09-28" name="bday" required>
+                <div id="datum"><label><b>Datum rodjenja</b></label>
+                    <!-- <input type="date" value="1989-09-28" name="bday" required> -->
+                </div>
 
-                <label><b>Gmail</b></label>
-                <input type="email" value="mirkovic.p@gmail.com" name="psw" required>
+                <div id="gmail"><label><b>Gmail</b></label>
+                    <!-- <input type="email" value="mirkovic.p@gmail.com" name="psw" required> -->
+                </div>
             </div>
-            <button type="submit" class="btn">Izmeni</button>
+            <!-- <button type="submit" class="btn">Izmeni</button> -->
         </form>
     </div>
 
@@ -133,7 +140,7 @@
             </div>
             <div class="second">
                 <label><b>Telefon</b></label>
-                <input type="tel" id="phone" placeholder="Unesite telefon" name="phone"pattern="[0-9]{10}" required>
+                <input type="tel" id="phone" placeholder="Unesite telefon" name="phone" pattern="[0-9]{10}" required>
 
                 <label><b>Adresa</b></label>
                 <input type="text" placeholder="Unesite adresu" name="psw" required>
@@ -158,6 +165,7 @@
     </div>
 
     <script src="funkcije.js"></script>
+    <script src="korisnik_izmeni.js"></script>
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

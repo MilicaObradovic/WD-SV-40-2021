@@ -52,7 +52,7 @@
     width: 100%;
   }
   
- .form-container3 .btn{
+ /* .form-container3 .btn{
     background-color:rgba(255, 255, 255, 0.1);
     color: white;
     padding: 16px 20px;
@@ -61,7 +61,21 @@
     width: 100%;
     margin-bottom:10px;
     opacity: 0.9;
-  }
+  } */
+
+  .form-container3 .btn{
+    background-color:rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.9;
+}
+.prvi .btn:hover{
+    opacity: 1;
+}
   
   .first, .second{
     display: inline-block;
@@ -69,9 +83,9 @@
     padding: 20px;
   }
   
-  .form-container3 .btn:hover {
+  /* .form-container3 .btn:hover {
     opacity: 1;
-  }
+  } */
   
   @media screen and (max-width: 576px) {
     .first, .second{
@@ -83,8 +97,8 @@
       padding: 8px;
       margin: 3px 0 11px 0;
     }
-     .form-container3 .btn{
+     /* .form-container3 .btn{
       padding: 8px 10px;
       margin-bottom:5px;
-    }
+    } */
   }

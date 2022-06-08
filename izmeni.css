@@ -12,14 +12,25 @@
     box-shadow: 8px 9px 6px -6px rgb(41, 0, 0);
     color: rgb(255, 255, 255);
 }
-/* h1{
-    padding-bottom: 0px;
-} */
 
-.prvi, .drugi{
+.prvi .btn{
+    background-color:rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.9;
+}
+.prvi .btn:hover{
+    opacity: 1;
+}
+
+/* .prvi, .drugi{
     display: inline-block;
     padding: 20px;
-}
+} */
 @media screen and (max-width: 371px) {
     .pocetna-slika{
         margin-top: 40px;
