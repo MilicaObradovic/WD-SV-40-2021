@@ -13,7 +13,7 @@
     color: rgb(255, 255, 255);
 }
 
-.prvi .btn{
+#edit-form .btn{
     background-color:rgba(255, 255, 255, 0.1);
     color: white;
     padding: 16px 20px;
@@ -23,7 +23,7 @@
     margin-bottom:10px;
     opacity: 0.9;
 }
-.prvi .btn:hover{
+#edit-form .btn:hover{
     opacity: 1;
 }
 

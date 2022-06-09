@@ -93,7 +93,7 @@ function appendPodaci(korisnik){
     ime.innerText = "Gmail"
     let p1 = document.createElement("p");
     p1.classList.add("profil-text")
-    p1.innerText = korisnik.gmail
+    p1.innerText = korisnik.email
     div1.appendChild(ime)
     div1.appendChild(p1)
 
