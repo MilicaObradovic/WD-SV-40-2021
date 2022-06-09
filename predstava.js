@@ -120,6 +120,7 @@ function appendPredstava(id, pozoriste) {
     button.innerText = "Izmeni"
     textPozoriste.appendChild(button);
 
+
     let slika = document.createElement("img");
     slika.classList.add("pocetna-slika", "col-lg-4", "col-xl-3")
     slika.src = pozoriste.slika

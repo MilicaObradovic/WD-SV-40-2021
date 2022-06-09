@@ -89,6 +89,35 @@ function showDetaljnije(){
     window.location.href = "predstava1.html?id=" + data + ";pozoriste=" + poz;
 }
 
+function showObrisi(){
+    var txt;
+    if (confirm("Da li zelite da obrisete predstavu?")) {
+        txt = true;
+    } else {
+        txt = false;
+    }
+    if(txt == true){
+        let clickedBtn = this;
+        let predstava = clickedBtn.getAttribute("data-id");
+        let pozoristePredstave = clickedBtn.getAttribute("predstave-id");
+        let request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (this.readyState == 4) {
+                if (this.status == 200) {
+                    getPredstave();
+                } else {
+                    alert("Greška prilikom brisanja automobila.");
+                }
+            }
+        };
+
+        request.open("DELETE", firebaseURL + "/predstave/" + pozoristePredstave + "/"+ predstava + ".json");
+        request.send();
+    }
+    
+}
+
 function appendZaglavlje(naziv){
     let sekcija = document.createElement("h1");
     sekcija.innerText = naziv
@@ -139,6 +168,16 @@ function appendPredstava(body,id, pozoriste) {
     button.setAttribute("predstave-id", predstava);
     button.innerText = "Detaljnije"
     textPozoriste.appendChild(button);
+
+    let button2 = document.createElement("button");
+    button2.type = "button";
+    button2.className = "btn"
+    button2.onclick = showObrisi
+    button2.setAttribute("data-id", id);
+    button2.setAttribute("class", "obrisi");
+    button2.setAttribute("predstave-id", predstava);
+    button2.innerText = "Obrisi"
+    textPozoriste.appendChild(button2);
 
     let slika = document.createElement("img");
     slika.classList.add("slika")

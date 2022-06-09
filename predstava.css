@@ -64,6 +64,7 @@ h1{
     opacity: 1;
 }
 
+
 @media screen and (max-width: 576px) {
     .predstava{
         width: 100%;

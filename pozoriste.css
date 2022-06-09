@@ -52,6 +52,21 @@
 .text .btn:hover{
     opacity: 1;
 }
+
+.obrisi{
+    background-color: rgba(40, 0, 0, 0.5);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.9;
+}
+.obrisi:hover{
+    opacity: 1;
+}
+
 @media screen and (min-width: 992px) {
     .div-slika{
         text-align: center;
