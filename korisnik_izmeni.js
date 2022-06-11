@@ -9,7 +9,7 @@ getKorisnik()
 let izmeni = document.getElementById("sekcija");
 
 izmeni.addEventListener("submit", function (e) {
-    alert("ovv")
+    // alert("ovv")
     e.preventDefault();
     if (validate() == false){
         alert("Neki od unesenih podataka nisu validni.");

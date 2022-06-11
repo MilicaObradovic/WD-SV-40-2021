@@ -29,6 +29,36 @@ function getKorisnik(){
     
 }
 
+function showObrisi(){
+    let txt;
+    if (confirm("Da li zelite da deaktivirate korisnika?")) {
+        txt = true;
+    } else {
+        txt = false;
+    }
+    if(txt == true){
+        let clickedBtn = this;
+        let korisnik = clickedBtn.getAttribute("data-id");
+        let request = new XMLHttpRequest();
+        korisnik = korisnici[korisnikId]
+        korisnik.blokiran = true
+
+        request.onreadystatechange = function () {
+            if (this.readyState == 4) {
+                if (this.status == 200) {
+                    window.location.href = "korisnici.html";
+                } else {
+                    alert("Greška prilikom brisanja automobila.");
+                }
+            }
+        };
+
+        request.open("PUT", firebaseURL + "/korisnici/" + korisnikId + ".json");
+        request.send(JSON.stringify(korisnik));
+    }
+    
+}
+
 function getParamValue() {
     let location = decodeURI(window.location.toString());
     let index = location.indexOf("?") + 1;
@@ -135,7 +165,15 @@ function appendPodaci(korisnik){
     button.onclick = showIzmeni
     button.setAttribute("data-id", korisnikId);
     button.innerText = "Izmeni korisnika"
+
+    let button2 = document.createElement("button");
+    button2.type = "button";
+    button2.className = "btn"
+    button2.onclick = showObrisi
+    button2.setAttribute("data-id", korisnikId);
+    button2.innerText = "Deaktiviraj korisnika"
     // textPozoriste.appendChild(button);
     document.getElementById("podaci").appendChild(button);
+    document.getElementById("podaci").appendChild(button2);
 
 }

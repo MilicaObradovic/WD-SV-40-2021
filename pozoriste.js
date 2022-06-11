@@ -90,7 +90,7 @@ function showDetaljnije(){
 }
 
 function showObrisi(){
-    var txt;
+    let txt;
     if (confirm("Da li zelite da obrisete predstavu?")) {
         txt = true;
     } else {

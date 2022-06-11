@@ -60,11 +60,6 @@ function showIzmeni(){
 }
 
 function appendPredstava(id, pozoriste) {
-    // let sekcija = document.createElement("div");
-    // sekcija.classList.add("row", "predstava")
-
-    // let slikaPozoriste = document.createElement("div");
-    // slikaPozoriste.classList.add("pocetna")
 
     let textPozoriste = document.createElement("div");
     textPozoriste.classList.add("opis", "col-lg-8", "col-xl-9");
@@ -125,7 +120,6 @@ function appendPredstava(id, pozoriste) {
     slika.classList.add("pocetna-slika", "col-lg-4", "col-xl-3")
     slika.src = pozoriste.slika
     slika.alt = "predstava"
-    // slikaPozoriste.appendChild(slika);
   
     document.getElementById("predstava").appendChild(slika);
     document.getElementById("predstava").appendChild(textPozoriste);

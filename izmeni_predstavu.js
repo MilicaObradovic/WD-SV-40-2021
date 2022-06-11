@@ -58,6 +58,7 @@ function validate(){
     let kod = document.getElementById('kod2').value;
     let osobe = document.getElementById('osobe2').value;
     let opis = document.getElementById('opis2').value;
+    alert(opis)
 
     if(naziv.length < 2){
         return false

@@ -14,9 +14,10 @@ function getKorisnici(){
                 korisnici = JSON.parse(request.responseText);
                 for (let id in korisnici) {
                     let korisnik = korisnici[id];
-                    
-                    appendKorisnik(id, korisnik);
-                    appendMiniKorisnik(id, korisnik);
+                    if(korisnik.blokiran == false){
+                        appendKorisnik(id, korisnik);
+                        appendMiniKorisnik(id, korisnik);
+                    }
                 }
             } else {
                 alert("Greška prilikom učitavanja predstava.");
@@ -64,6 +65,7 @@ function appendKorisnik(id, pozoriste) {
 
     let td4 = document.createElement("td");
     td4.appendChild(button)
+    // td4.appendChild(button2)
 
     tr.appendChild(td1)
     tr.appendChild(td2)
@@ -115,6 +117,7 @@ function appendMiniKorisnik(id, pozoriste) {
     sekcija.appendChild(td5)
     sekcija.appendChild(td6)
     sekcija.appendChild(button)
+    // sekcija.appendChild(button2)
   
     document.getElementById("mini-table").appendChild(sekcija);
 }

@@ -413,7 +413,8 @@
             "lozinka": "petar123",
             "prezime": "Petrović",
             "telefon": "061456456",
-            "korisnickoIme": "petar"
+            "korisnickoIme": "petar",
+            "blokiran": false
         },
         "-MNQoCqEXydVTdCNV47C": {
             "adresa": "Jug Bogdana 14, Zrenjanin",
@@ -423,7 +424,8 @@
             "lozinka": "jovana123",
             "prezime": "Jovanović",
             "telefon": "062321321",
-            "korisnickoIme": "jovana"
+            "korisnickoIme": "jovana",
+            "blokiran": false
         },
         "-MNQoJw2p9rci4Rm_rYY": {
             "adresa": "Cara Lazara 9a, Kragujevac",
@@ -433,7 +435,8 @@
             "lozinka": "marko123",
             "prezime": "Marković",
             "telefon": "063876876",
-            "korisnickoIme": "marko"
+            "korisnickoIme": "marko",
+            "blokiran": false
         },
         "-MNQoR-5erkWvcm8Hdnk": {
             "adresa": "Solunska 5, Niš",
@@ -443,7 +446,8 @@
             "lozinka": "filip123",
             "prezime": "Filipović",
             "telefon": "064159159",
-            "korisnickoIme": "filip"
+            "korisnickoIme": "filip",
+            "blokiran": false
         },
         "-MNQoWt_gDudX5W8TLQj": {
             "adresa": "Ružićeva 32, Beograd",
@@ -453,7 +457,8 @@
             "lozinka": "tijana123",
             "prezime": "Tijanić",
             "telefon": "065753753",
-            "korisnickoIme": "tijana"
+            "korisnickoIme": "tijana",
+            "blokiran": false
         }
     }
 }

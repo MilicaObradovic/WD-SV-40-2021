@@ -264,3 +264,35 @@ h1{
   top: 1%;
   right: 80px;
 }
+
+.ulogovan{
+  display: none;
+}
+.ulogovanP{
+  font-style: oblique;
+  font-size: large;
+  color: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  top: 5%;
+  right: 100px;
+}
+@media screen and (max-width: 500px) {
+  .ulogovanP{
+    top: 12%;
+    right: 10px;
+  }
+}
+
+@media screen and (max-width: 371px) {
+  .ulogovanP{
+    top: 17%;
+    right: 80px;
+  }
+}
+
+@media screen and (max-width: 295px) {
+  .ulogovanP{
+    top: 17%;
+    right: 5px;
+  }
+}
