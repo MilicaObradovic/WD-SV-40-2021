@@ -77,7 +77,8 @@
                 "cena": 1760,
                 "maxOsobe": 90,
                 "ocena": 4.09,
-                "ocene": [0, 2, 4, 7, 10]
+                "ocene": [0, 2, 4, 7, 10],
+                "komentari": 0
             },
             "-MNQftJa4rskH-dBqE9Z1": {
                 "naziv": "BALKANSKI ŠPIJUN",
@@ -90,7 +91,8 @@
                 "cena": 1950,
                 "maxOsobe": 60,
                 "ocena": 4.18,
-                "ocene": [1, 0, 2, 10, 9]
+                "ocene": [1, 0, 2, 10, 9],
+                "komentari": 0
             },
             "-MNQftJa4rskH-dBqE9Z2": {
                 "naziv": "Iranska konferencija",
@@ -103,7 +105,8 @@
                 "cena": 3250,
                 "maxOsobe": 45,
                 "ocena": 4.81,
-                "ocene": [0, 0, 1, 3, 23]
+                "ocene": [0, 0, 1, 3, 23],
+                "komentari": 0
             },
             "-MNQftJa4rskH-dBqE9Z3": {
                 "naziv": "Karmen",
@@ -116,7 +119,8 @@
                 "cena": 1490,
                 "maxOsobe": 60,
                 "ocena": 4.81,
-                "ocene": [0, 0, 1, 3, 23]
+                "ocene": [0, 0, 1, 3, 23],
+                "komentari": 0
             },
             "-MNQftJa4rskH-dBqE9Z4": {
                 "naziv": "Manon Lesko",
@@ -129,7 +133,8 @@
                 "cena": 2250,
                 "maxOsobe": 60,
                 "ocena": 4.39,
-                "ocene": [0, 0, 2, 7, 17]
+                "ocene": [0, 0, 2, 7, 17],
+                "komentari": 0
             },
             "-MNQftJa4rskH-dBqE9Z5": {
                 "naziv": "Frenki i Džoni",
@@ -142,7 +147,8 @@
                 "cena": 1250,
                 "maxOsobe": 100,
                 "ocena": 4.39,
-                "ocene": [0, 0, 2, 7, 17]
+                "ocene": [0, 0, 2, 7, 17],
+                "komentari": 0
             },
             "-MNQftJa4rskH-dBqE9Z6": {
                 "naziv": "Hasanaginica",
@@ -155,7 +161,8 @@
                 "cena": 1850,
                 "maxOsobe": 110,
                 "ocena": 4.27,
-                "ocene": [0, 2, 0, 4, 15]
+                "ocene": [0, 2, 0, 4, 15],
+                "komentari": 0
             }
         },
         "-MNVEu6iMr2EFlQO6TW62": {
@@ -170,7 +177,8 @@
                 "cena": 2565,
                 "maxOsobe": 20,
                 "ocena": 4.09,
-                "ocene": [0, 2, 4, 7, 10]
+                "ocene": [0, 2, 4, 7, 10],
+                "komentari": 0
             },
             "-MNQftJa4rskH-dAqR9W1": {
                 "naziv": "Lorem ipsum dolor 2",
@@ -183,7 +191,8 @@
                 "cena": 2565,
                 "maxOsobe": 20,
                 "ocena": 4.09,
-                "ocene": [0, 2, 4, 7, 10]
+                "ocene": [0, 2, 4, 7, 10],
+                "komentari": 0
             },
             "-MNQftJa4rskH-dAqR9W2": {
                 "naziv": "Lorem ipsum dolor 3",
@@ -196,7 +205,8 @@
                 "cena": 1950,
                 "maxOsobe": 60,
                 "ocena": 4.09,
-                "ocene": [0, 2, 4, 7, 10]
+                "ocene": [0, 2, 4, 7, 10],
+                "komentari": 0
             },
             "-MNQftJa4rskH-dAqR9W3": {
                 "naziv": "Lorem ipsum dolor 4",
@@ -209,7 +219,8 @@
                 "cena": 3165,
                 "maxOsobe": 20,
                 "ocena": 4.09,
-                "ocene": [0, 2, 4, 7, 10]
+                "ocene": [0, 2, 4, 7, 10],
+                "komentari": 0
             },
             "-MNQftJa4rskH-dAqR9W4": {
                 "naziv": "Lorem ipsum dolor 5",
@@ -222,7 +233,8 @@
                 "cena": 2965,
                 "maxOsobe": 10,
                 "ocena": 4.09,
-                "ocene": [0, 2, 4, 7, 10]
+                "ocene": [0, 2, 4, 7, 10],
+                "komentari": 0
             },
             "-MNQftJa4rskH-dAqR9W5": {
                 "naziv": "Lorem ipsum dolor 6",
@@ -235,7 +247,8 @@
                 "cena": 1550,
                 "maxOsobe": 20,
                 "ocena": 4.09,
-                "ocene": [0, 2, 4, 7, 10]
+                "ocene": [0, 2, 4, 7, 10],
+                "komentari": 0
             },
             "-MNQftJa4rskH-dAqR9W6": {
                 "naziv": "Lorem ipsum dolor 7",
@@ -248,7 +261,8 @@
                 "cena": 950,
                 "maxOsobe": 30,
                 "ocena": 4.09,
-                "ocene": [0, 2, 4, 7, 10]
+                "ocene": [0, 2, 4, 7, 10],
+                "komentari": 0
             },
             "-MNQftJa4rskH-dAqR9W7": {
                 "naziv": "Lorem ipsum dolor 8",
@@ -261,7 +275,8 @@
                 "cena": 1165,
                 "maxOsobe": 30,
                 "ocena": 4.09,
-                "ocene": [0, 2, 4, 7, 10]
+                "ocene": [0, 2, 4, 7, 10],
+                "komentari": 0
             },
             "-MNQftJa4rskH-dAqR9W8": {
                 "naziv": "Lorem ipsum dolor 9",
@@ -274,7 +289,8 @@
                 "cena": 2965,
                 "maxOsobe": 110,
                 "ocena": 4.09,
-                "ocene": [0, 2, 4, 7, 10]
+                "ocene": [0, 2, 4, 7, 10],
+                "komentari": 0
             },
             "-MNQftJa4rskH-dAqR9W9": {
                 "naziv": "Lorem ipsum dolor 10",
@@ -287,7 +303,8 @@
                 "cena": 1110,
                 "maxOsobe": 60,
                 "ocena": 4.09,
-                "ocene": [0, 2, 4, 7, 10]
+                "ocene": [0, 2, 4, 7, 10],
+                "komentari": 0
             }
 
         },
@@ -303,7 +320,8 @@
                 "cena": 2760,
                 "maxOsobe": 50,
                 "ocena": 4.23,
-                "ocene": [0, 2, 4, 3, 13]
+                "ocene": [0, 2, 4, 3, 13],
+                "komentari": 0
             },
             "-MNQftJa4rskH-dBqF9Z1": {
                 "naziv": "USPAVANKA ZA VUKA NIČIJEG",
@@ -316,7 +334,8 @@
                 "cena": 1050,
                 "maxOsobe": 90,
                 "ocena": 4.81,
-                "ocene": [0, 0, 1, 3, 23]
+                "ocene": [0, 0, 1, 3, 23],
+                "komentari": 0
             },
             "-MNQftJa4rskH-dBqF9Z2": {
                 "naziv": "Sumnjivo lice",
@@ -329,7 +348,8 @@
                 "cena": 1550,
                 "maxOsobe": 50,
                 "ocena": 4.81,
-                "ocene": [0, 0, 0, 3, 13]
+                "ocene": [0, 0, 0, 3, 13],
+                "komentari": 0
             }
         },
         
@@ -345,7 +365,8 @@
                 "cena": 2150,
                 "maxOsobe": 40,
                 "ocena": 4.31,
-                "ocene": [1, 0, 3, 3, 12]
+                "ocene": [1, 0, 3, 3, 12],
+                "komentari": 0
             },
             "-MNQftJa4rskH-dBqF9Z4": {
                 "naziv": "Nesporazum",
@@ -358,7 +379,8 @@
                 "cena": 2150,
                 "maxOsobe": 40,
                 "ocena": 4.81,
-                "ocene": [0, 0, 1, 3, 23]
+                "ocene": [0, 0, 1, 3, 23],
+                "komentari": 0
             },
             "-MNQftJa4rskH-dBqF9Z5": {
                 "naziv": "Kovači",
@@ -371,7 +393,8 @@
                 "cena": 1800,
                 "maxOsobe": 45,
                 "ocena": 4.5,
-                "ocene": [0, 1, 2, 3, 14]
+                "ocene": [0, 1, 2, 3, 14],
+                "komentari": 0
             },
             "-MNQftJa4rskH-dBqF9Z6": {
                 "naziv": "Moć Sudbine",
@@ -384,7 +407,8 @@
                 "cena": 2350,
                 "maxOsobe": 40,
                 "ocena": 3.82,
-                "ocene": [2, 4, 0, 7, 10]
+                "ocene": [2, 4, 0, 7, 10],
+                "komentari": 0
             },
             "-MNQftJa4rskH-dBqF9Z7": {
                 "naziv": "Mikelanđelo",
@@ -397,7 +421,8 @@
                 "cena": 1350,
                 "maxOsobe": 120,
                 "ocena": 4.81,
-                "ocene": [0, 0, 1, 3, 23]
+                "ocene": [0, 0, 1, 3, 23],
+                "komentari": 0
             }
         },
         "-MNVEu6iMr2EFlQO6TW55": {
@@ -461,4 +486,5 @@
             "blokiran": false
         }
     }
+
 }

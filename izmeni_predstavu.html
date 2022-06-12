@@ -16,9 +16,11 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark navbar-custom">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img class="logo" src="slike/logo.png" alt="Logo"></a>
-            <button class="d-block d-sm-none btn btn-outline-light" id="dugme3" type="button" onclick="openForm3()">
-                Prijava
-            </button>
+            <div id="div-dugme3">
+                <button class="d-block d-sm-none btn btn-outline-light" id="dugme3" type="button" onclick="openForm3()">
+                    Prijava
+                </button>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -28,29 +30,14 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="pocetna.html">Pocetna</a>
-                    </li>
-
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Predstave
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="pozoriste1.html">Srpsko narodno pozorište</a></li>
-                            <li><a class="dropdown-item" href="#">Pozorište mladih</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Narodno poozorište Niš</a></li>
-                        </ul>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="korisnici.html">Korisnici</a>
+                        <a class="nav-link " aria-current="page" href="pocetna.html">Pocetna</a>
                     </li>
                     <li class="nav-item">
+                        <a id="navKorisnici" href="korisnici.html" class="nav-link" >Korisnici</a>
+                    </li>
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="korisnik1.html">Profil</a>
-                    </li>
+                    </li> -->
 
                 </ul>
 
@@ -111,19 +98,22 @@
 
     </div><br><br>
 
-    <div class="buttons">
+    <div id="dugmad" class="buttons">
         <button id="dugme" class="open-button d-none d-sm-block" onclick="openForm()">Login</button>
         <button id="dugme2" class="open-button2 d-none d-sm-block" onclick="openForm2()">Register</button>
     </div>
+    <div id="ulogovan" class="ulogovan">
+
+    </div>
     <div class="form-popup" id="myForm">
-        <form class="form-container">
+        <form id="login" class="form-container">
             <h1>Login</h1>
 
             <label><b>Korisnicko ime</b></label>
-            <input type="text" placeholder="Unesite korisnicko ime" name="korisnicko_ime" required>
+            <input id="login1" type="text" placeholder="Unesite korisnicko ime" name="korisnicko_ime" required>
 
             <label><b>Lozinka</b></label>
-            <input type="text" placeholder="Unesite lozinku" name="psw" required>
+            <input id="login2" type="text" placeholder="Unesite lozinku" name="psw" required>
 
             <button type="submit" class="btn">Login</button>
             <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
@@ -131,33 +121,33 @@
     </div>
 
     <div class="form-popup2" id="myForm2">
-        <form class="form-container2">
+        <form id="register" class="form-container2">
             <h1>Register</h1>
             <div class="first">
                 <label><b>Korisnick ime</b></label>
-                <input type="text" placeholder="Unesite korisnicko ime" name="email" required>
+                <input id="register1" type="text" placeholder="Unesite korisnicko ime" name="email" required>
 
                 <label><b>Lozinka</b></label>
-                <input type="text" placeholder="Unesite lozinku" name="psw" required>
+                <input id="register2" type="text" placeholder="Unesite lozinku" name="psw" required>
 
                 <label><b>Ime</b></label>
-                <input type="text" placeholder="Unesite ime" name="email" required>
+                <input id="register3" type="text" placeholder="Unesite ime" name="email" required>
 
                 <label><b>Prezime</b></label>
-                <input type="text" placeholder="Unesite prezime" name="psw" required>
+                <input id="register4" type="text" placeholder="Unesite prezime" name="psw" required>
             </div>
             <div class="second">
                 <label><b>Telefon</b></label>
-                <input type="tel" id="phone" placeholder="Unesite telefon" name="phone" pattern="[0-9]{10}" required>
+                <input id="register5" type="tel" id="phone" placeholder="Unesite telefon" name="phone" pattern="[0-9]{10}" required>
 
                 <label><b>Adresa</b></label>
-                <input type="text" placeholder="Unesite adresu" name="psw" required>
+                <input id="register6" type="text" placeholder="Unesite adresu" name="psw" required>
 
                 <label><b>Datum rodjenja</b></label>
-                <input type="date" name="bday" required>
+                <input id="register7" type="date" name="bday" required>
 
                 <label><b>Gmail</b></label>
-                <input type="email" placeholder="Unesite gmail" name="psw" required>
+                <input id="register8" type="email" placeholder="Unesite gmail" name="psw" required>
             </div>
             <button type="submit" class="btn">Register</button>
             <button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
@@ -173,6 +163,7 @@
     </div>
 
     <script src="funkcije.js"></script>
+    <script src="prijava.js"></script>
     <script src="izmeni_predstavu.js"></script>
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/popper.min.js"></script>

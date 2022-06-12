@@ -1,7 +1,10 @@
-let firebaseURL = "https://pozoriste-dff61-default-rtdb.europe-west1.firebasedatabase.app"
+// let firebaseURL = "https://pozoriste-dff61-default-rtdb.europe-west1.firebasedatabase.app"
 let pozorista = {}
 
+
 getPozorista()
+// getKorisnici()
+// isUlogovan()
 
 function getPozorista(){
     let request = new XMLHttpRequest();
@@ -17,6 +20,7 @@ function getPozorista(){
                 for (let id in pozorista) {
                     let pozoriste = pozorista[id];
                     appendPozoriste("pozorista",id, pozoriste);
+                    // sendUlogovan()
                 }
             } else {
                 alert("Greška prilikom učitavanja pozorista.");
@@ -27,6 +31,7 @@ function getPozorista(){
   request.open("GET", firebaseURL + "/pozorista.json");
   request.send();
 }
+
 
 function removePozorista(id) {
     let pozorista = document.getElementById(id);

@@ -1,4 +1,4 @@
-let firebaseURL = "https://pozoriste-dff61-default-rtdb.europe-west1.firebasedatabase.app"
+// let firebaseURL = "https://pozoriste-dff61-default-rtdb.europe-west1.firebasedatabase.app"
 let predstave = {}
 let pozorista = {}
 let ids = getParamValue();
