@@ -5,10 +5,11 @@ let ids = getParamValue();
 let predstaveId = ids[0]
 let pozoristeId = ids[1]
 let trenutnaPredstava = {}
+let brojZaId = 0
 // console.log(pozoristeId)
 
-
 getPredstave()
+
 
 function getPredstave(){
     let request = new XMLHttpRequest();
@@ -19,10 +20,11 @@ function getPredstave(){
             if (this.status == 200) {
                 predstave = JSON.parse(request.responseText);
                 predstave1 = predstave[pozoristeId[1]]
-                console.log(predstave)
+                // console.log(predstave)
                 trenutnaPredstava = predstave1[predstaveId[1]]
                 appendZaglavlje(trenutnaPredstava.naziv)
                 appendPredstava(predstaveId[1], trenutnaPredstava)
+                // dodajBezveze()
             } else {
                 alert("Greška prilikom učitavanja predstava.");
             }
@@ -87,11 +89,33 @@ function showPosaljiKomentar(){
     put.send(JSON.stringify(trenutnaPredstava));
 }
 
+function dodajBezveze(){
+    console.log(trenutnaPredstava.komentari)
+    // alert("ov")
+    trenutnaPredstava.komentari[0].komentari = [{"ime": "xx", "text": "xx","id":1, "komentari": 0}]
+    // let xxx = trenutnaPredstava.komentari[0].komentari.push()
+    let put = new XMLHttpRequest();
+
+    put.onreadystatechange = function (e) {
+            if (this.readyState == 4) {
+                if (this.status == 200) {
+                    alert("bzvz")
+                    window.location.href = "predstava1.html?id=" + predstaveId[1] + ";pozoriste=" + pozoristeId[1];
+                } else {
+                    alert("Greška prilikom dodavanja komentara.");
+                }
+            }
+        };
+
+    put.open("PUT", firebaseURL + "/predstave/" + pozoristeId[1] + "/" + predstaveId[1] + ".json");
+    put.send(JSON.stringify(trenutnaPredstava));
+}
+
 
 function showKomentarisi(){
-    let clickedBtn = this;
-    let data = clickedBtn.getAttribute("data-id");
-    let poz = clickedBtn.getAttribute("predstave-id");
+    // let clickedBtn = this;
+    // let data = clickedBtn.getAttribute("data-id");
+    // let poz = clickedBtn.getAttribute("predstave-id");
     let show = document.getElementById("showKomentarisi")
     show.style.display = "none"
 
@@ -222,9 +246,14 @@ function appendPredstava(id, pozoriste) {
     }
 }
 
+// function odgovoriNaKom(){
+//     let clickedBtn = this;
+//     let data = clickedBtn.getAttribute("id");
+// }
+
 function createKom(komentar){
     let novi = document.createElement("div")
-    novi.setAttribute("id", komentar.id)
+    novi.setAttribute("id", "komentar"+komentar.id.toString())
     novi.classList.add("komentar")
     let p1 = document.createElement("p")
     p1.innerText = komentar.ime+":"
@@ -232,25 +261,33 @@ function createKom(komentar){
     p2.innerText = komentar.text
     let button = document.createElement("button")
     button.setAttribute("type","button")
+    button.setAttribute("id", "button"+komentar.id.toString())
     button.classList.add("btn")
     button.innerText = "Odgovori"
     // button.onclick = odgovori
+
+    let forma = document.createElement("form")
+    forma.setAttribute("id", "forma"+komentar.id.toString())
+
     novi.appendChild(p1)
     novi.appendChild(p2)
     novi.appendChild(button)
+    novi.appendChild(forma)
     return novi
 }
 
 function appendKomentarReq(komentar){
-    if(komentar.komentari == 0){
-        let novi = createKom(komentar)
-        return novi
+    if(komentar == 0){
+        // let novi = createKom(komentar)
+        return true
     }
     let pocetni = createKom(komentar)
     for(let kor in komentar.komentari){
         // let tren = createKom(kor)
         // deca
-        let noviK = appendKomentarReq(komentar.komentari[kor].komentari)
+        alert(kor)
+        let tt = appendKomentarReq(komentar.komentari[kor].komentari)
+        let noviK = createKom(komentar.komentari[kor])
         pocetni.appendChild(noviK)
     }
     return pocetni
