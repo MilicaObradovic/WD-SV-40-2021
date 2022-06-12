@@ -1,5 +1,6 @@
 // let firebaseURL = "https://pozoriste-dff61-default-rtdb.europe-west1.firebasedatabase.app"
 // let korisnici = {}
+let greskeL = []
 let korisnik = {}
 let korisnikId = getParamValue();
 // console.log(pozoristeId)
@@ -12,7 +13,18 @@ izmeni.addEventListener("submit", function (e) {
     // alert("ovv")
     e.preventDefault();
     if (validate() == false){
-        alert("Neki od unesenih podataka nisu validni.");
+        // alert("Neki od unesenih podataka nisu validni.");
+        let string = "Greske u formi: "
+        for(let i in greskeL){
+            console.log(i)
+            string+= greskeL[i]
+            if(i != greskeL.length-1){
+                string+=", "
+            }
+        }
+        string+="!!"
+        string+=" Nemoguca izmena!!"
+        alert(string)
     }else{
         let putRequest = new XMLHttpRequest();
 
@@ -44,6 +56,7 @@ function isNumber(char) {
   }
 
 function validate(){
+    greskeL = []
     let korisnicko = document.getElementById('korisnicko2').value;
     let lozinka = document.getElementById('lozinka2').value;
     let ime = document.getElementById('ime2').value;
@@ -52,39 +65,54 @@ function validate(){
     let adresa = document.getElementById('adresa2').value;
     let datum = document.getElementById('datum2').value;
     let gmail = document.getElementById('gmail2').value;
+    // alert(gmail)
 
     if(korisnicko.length < 3){
-        return false
+        greskeL.push("kratko korisnicko ime")
     }else if(lozinka.length < 6){
-        return false
-    }else if(telefon.length < 9){
-        return false
-    }else if(gmail.length < 8){
-        return false
+        greskeL.push("kratka lozinka")
+    }else if(gmail.length < 7){
+        greskeL.push("kratak gmail")
     }else if(adresa.length < 10){
-        return false
+        greskeL.push("kratka adresa")
     }else if(ime.length < 3){
-        return false
+        greskeL.push("kratko ime")
     }else if(prezime.length < 3){
-        return false
+        greskeL.push("kratko prezime")
+    }
+
+    for(let kor in korisniciLogin){
+        if(kor != korisnikId){
+            // alert("ovde")
+            if(korisnicko == korisniciLogin[kor].korisnickoIme){
+                greskeL.push("vec postoji korisnicko ime u bazi")
+            }
+            if(gmail == korisniciLogin[kor].email){
+                alert("ovde")
+                greskeL.push("vec postoji gmail u bazi")
+            }
+        }
+    }
+
+    let today = new Date();
+    let dat = new Date(datum)
+    if(dat>today){
+        greskeL.push("uneli ste datum iz buducnosti")
     }
     
     for(let i in ime){
         if(isNumber(ime[i]) == true ){
-            
-            return false
+            greskeL.push("unos za ime sadrzi broj")
         }
     }
     for(let i in prezime){
         if(isNumber(prezime[i]) == true ){
-            
-            return false
+            greskeL.push("unos za prezime sadrzi broj")
         }
     }
     for(let i in telefon){
         if(isNaN(parseInt(telefon[i])) == true ){
-            console.log("ovde")
-            return false
+            greskeL.push("unos za telefon sadrzi slovo")
         }
     }
     pronadjen = false
@@ -98,22 +126,37 @@ function validate(){
         }
     }
     if(pronadjen == false){
-        return false
+        greskeL.push("fali @ u polju za gmail")
     }else if(pronadjen2 == false){
+        greskeL.push("fali . u polju za gmail")
+    }
+    if(greskeL.length == 0){
+        korisnik.korisnickoIme = korisnicko
+        korisnik.lozinka = lozinka
+        korisnik.ime = ime
+        korisnik.prezime = prezime
+        korisnik.adresa = adresa
+        korisnik.telefon = telefon
+        korisnik.datum = datum
+        korisnik.email = gmail
+        console.log(korisnik)
+        return true
+    }else{
         return false
     }
+}
 
-    korisnik.korisnickoIme = korisnicko
-    korisnik.lozinka = lozinka
-    korisnik.ime = ime
-    korisnik.prezime = prezime
-    korisnik.adresa = adresa
-    korisnik.telefon = telefon
-    korisnik.datum = datum
-    korisnik.email = gmail
-    console.log(korisnik)
-    return true
+function validate2Prijava(){
 
+    for(let kor in korisniciLogin){
+        if(korisnicko == korisniciLogin[kor].korisnickoIme){
+            greske.push("vec postoji korisnicko ime u bazi")
+        }
+        if(gmail == korisniciLogin[kor].email){
+            greske.push("vec postoji gmail u bazi")
+        }
+
+    }
 }
 
 function getKorisnik(){
