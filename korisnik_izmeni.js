@@ -1,5 +1,5 @@
 // let firebaseURL = "https://pozoriste-dff61-default-rtdb.europe-west1.firebasedatabase.app"
-let korisnici = {}
+// let korisnici = {}
 let korisnik = {}
 let korisnikId = getParamValue();
 // console.log(pozoristeId)
@@ -69,7 +69,6 @@ function validate(){
         return false
     }
     
-
     for(let i in ime){
         if(isNumber(ime[i]) == true ){
             
@@ -82,7 +81,6 @@ function validate(){
             return false
         }
     }
-
     for(let i in telefon){
         if(isNaN(parseInt(telefon[i])) == true ){
             console.log("ovde")
@@ -125,8 +123,9 @@ function getKorisnik(){
         // console.log(this.readyState)
         if (this.readyState == 4) {
             if (this.status == 200) {
-                korisnici = JSON.parse(request.responseText);
-                korisnik = korisnici[korisnikId]
+                // korisnici = JSON.parse(request.responseText);
+                // korisnik = korisnici[korisnikId]
+                korisnik = JSON.parse(request.responseText);
                 // console.log(korisnik)
                 appendZaglavlje(korisnik.korisnickoIme)
                 appendKorisnik(korisnik)
@@ -136,7 +135,7 @@ function getKorisnik(){
         }
     };
 
-    request.open("GET", firebaseURL + "/korisnici.json");
+    request.open("GET", firebaseURL + "/korisnici/"+korisnikId+".json");
     request.send();
     
 }

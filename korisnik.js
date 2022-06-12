@@ -1,5 +1,5 @@
 // let firebaseURL = "https://pozoriste-dff61-default-rtdb.europe-west1.firebasedatabase.app"
-let korisnici = {}
+// let korisnici = {}
 let korisnikId = getParamValue();
 // console.log(pozoristeId)
 
@@ -9,11 +9,11 @@ function getKorisnik(){
     let request = new XMLHttpRequest();
     
     request.onreadystatechange = function () {
-        // console.log(this.readyState)
         if (this.readyState == 4) {
             if (this.status == 200) {
-                korisnici = JSON.parse(request.responseText);
-                korisnik = korisnici[korisnikId]
+                // korisnici = JSON.parse(request.responseText);
+                // korisnik = korisnici[korisnikId]
+                korisnik = JSON.parse(request.responseText);
                 console.log(korisnik)
                 appendHead(korisnik)
                 appendNalog(korisnik)
@@ -24,7 +24,7 @@ function getKorisnik(){
         }
     };
 
-    request.open("GET", firebaseURL + "/korisnici.json");
+    request.open("GET", firebaseURL + "/korisnici/"+korisnikId+".json");
     request.send();
     
 }

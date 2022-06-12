@@ -10,11 +10,8 @@ console.log(pozoristeId)
 getPredstave()
 
 let izmeni = document.getElementById("edit-form");
-// console.log(izmeni)
-// alert(izmeni)
 
 izmeni.addEventListener("submit", function (e) {
-    // alert("usao u id")
     e.preventDefault();
     if (validate() == false){
         alert("Neki od unesenih podataka nisu validni.");
@@ -126,30 +123,6 @@ function validate(){
 
 }
 
-// function getPredstave(){
-//     let request = new XMLHttpRequest();
-    
-//     request.onreadystatechange = function () {
-//         // console.log(this.readyState)
-//         if (this.readyState == 4) {
-//             if (this.status == 200) {
-//                 predstave = JSON.parse(request.responseText);
-//                 predstava1 = predstave[pozoristeId[1]]
-//                 // console.log(predstava)
-//                 predstava = predstava1[predstaveId[1]]
-//                 appendZaglavlje(predstava.naziv)
-//                 appendPredstava(predstaveId[1], predstava)
-//             } else {
-//                 alert("Greška prilikom učitavanja predstava.");
-//             }
-//         }
-//     };
-
-//     request.open("GET", firebaseURL + "/predstave.json");
-//     request.send();
-    
-// }
-
 function getPredstave(){
     let request = new XMLHttpRequest();
     
@@ -157,11 +130,10 @@ function getPredstave(){
         // console.log(this.readyState)
         if (this.readyState == 4) {
             if (this.status == 200) {
-                predstava = JSON.parse(request.responseText);
-                // console.log(trenutnaPredstava)
-                // predstave = JSON.parse(request.responseText);
-                // predstave1 = predstave[pozoristeId[1]]
-                // trenutnaPredstava = predstave1[predstaveId[1]]
+                predstave = JSON.parse(request.responseText);
+                predstava1 = predstave[pozoristeId[1]]
+                // console.log(predstava)
+                predstava = predstava1[predstaveId[1]]
                 appendZaglavlje(predstava.naziv)
                 appendPredstava(predstaveId[1], predstava)
             } else {
@@ -170,7 +142,7 @@ function getPredstave(){
         }
     };
 
-    request.open("GET", firebaseURL + "/predstave/" +pozoristeId[1]+ "/" +predstaveId[1]+".json");
+    request.open("GET", firebaseURL + "/predstave.json");
     request.send();
     
 }

@@ -1,6 +1,7 @@
 let firebaseURL = "https://pozoriste-dff61-default-rtdb.europe-west1.firebasedatabase.app"
 // promenjive za prijavu
 var korisniciLogin = {}
+let greske = []
 var ulogovanKorisnik
 var novi_korisnik = {}
 getKorisniciPrijava()
@@ -27,29 +28,8 @@ login.addEventListener("submit", function (e) {
 
         let dugme3 = document.getElementById('div-dugme3');
         dugme3.style.display = "none"
-        // isUlogovan()
-        // sendUlogovan()
     }
 });
-
-// function sendUlogovan(){
-//     if(isUlogovan()){
-//         let navKorisnici = document.getElementById("navKorisnici")
-//         navKorisnici.setAttribute("href", "korisnici.html?id=" + ulogovanKorisnik )
-//     }else{
-//         let navKorisnici = document.getElementById("navKorisnici")
-//         navKorisnici.setAttribute("href", "korisnici.html?id=" )
-//     }
-// }
-
-// function isUlogovan(){
-//     let ulogovanProvera = document.getElementById("ulogovan")
-//     if(ulogovanProvera.querySelector("#ulogovanKor") != null){
-//         return true
-//     }
-//     return false
-    
-// }
 
 let register = document.getElementById("register");
 
@@ -57,7 +37,18 @@ register.addEventListener("submit", function (e) {
     // alert("usao u id")
     e.preventDefault();
     if (validate2Prijava() == false){
-        alert("Neki od podataka nisu validni!");
+        // alert("Neki od podataka nisu validni!");
+        let string = "Greske u formi: "
+        for(let i in greske){
+            console.log(i)
+            string+= greske[i]
+            if(i != greske.length-1){
+                string+=", "
+            }
+        }
+        string+="!!"
+        string+=" Nemoguca registracija!!"
+        alert(string)
     }else{
         let request = new XMLHttpRequest();
         request.open("POST", firebaseURL+"/korisnici.json", true);
@@ -98,12 +89,7 @@ function validatePrijava(){
     let korisnicko = document.getElementById('login1').value;
     let lozinka = document.getElementById('login2').value;
 
-    // korisniciLogin = getKorisnici()
     console.log(korisniciLogin)
-    // pitati t
-    // alert(korisnicko)
-    // alert(lozinka)
-    
 
     for(let kor in korisniciLogin){
         if(korisnicko == korisniciLogin[kor].korisnickoIme){
@@ -117,7 +103,20 @@ function validatePrijava(){
 
 }
 
+function isNumber(char) {
+    if (typeof char !== 'string') {
+      return false;
+    }
+  
+    if (char.trim() === '') {
+      return false;
+    }
+  
+    return !isNaN(char);
+  }
+
 function validate2Prijava(){
+    greske = []
     let korisnicko = document.getElementById('register1').value;
     let lozinka = document.getElementById('register2').value;
     let ime = document.getElementById('register3').value;
@@ -126,9 +125,73 @@ function validate2Prijava(){
     let adresa = document.getElementById('register6').value;
     let datum = document.getElementById('register7').value;
     let gmail = document.getElementById('register8').value;
+    
+    if(korisnicko.length < 3){
+        greske.push("kratko korisnicko ime")
+    }else if(lozinka.length < 6){
+        greske.push("kratka lozinka")
+    }else if(gmail.length < 7){
+        greske.push("kratak gmail")
+    }else if(adresa.length < 10){
+        greske.push("kratka adresa")
+    }else if(ime.length < 3){
+        greske.push("kratko ime")
+    }else if(prezime.length < 3){
+        greske.push("kratko prezime")
+    }
+    let today = new Date();
+    let dat = new Date(datum)
+    if(dat>today){
+        greske.push("uneli ste datum iz buducnosti")
+    }
 
-    novi_korisnik = {"korisnickoIme": korisnicko, "lozinka": lozinka, "ime": ime, "prezime": prezime, 
-    "telefon": telefon, "adresa": adresa, "datumRodjenja": datum, "email": gmail, "blokiran": false}
+    for(let kor in korisniciLogin){
+        if(korisnicko == korisniciLogin[kor].korisnickoIme){
+            greske.push("vec postoji korisnicko ime u bazi")
+        }
+        if(gmail == korisniciLogin[kor].email){
+            greske.push("vec postoji gmail u bazi")
+        }
 
-    return true
+    }
+    
+    for(let i in ime){
+        if(isNumber(ime[i]) == true ){
+            greske.push("unos za ime sadrzi broj")
+        }
+    }
+    for(let i in prezime){
+        if(isNumber(prezime[i]) == true ){
+            greske.push("unos za prezime sadrzi broj")
+        }
+    }
+    for(let i in telefon){
+        if(isNaN(parseInt(telefon[i])) == true ){
+            // console.log("ovde")
+            greske.push("unos za telefon sadrzi slovo")
+        }
+    }
+    pronadjen = false
+    pronadjen2 = false
+    for(let i in gmail){
+        if(gmail[i] == "@" ){
+            pronadjen = true
+        }
+        if(gmail[i] == "."){
+            pronadjen2 = true
+        }
+    }
+    if(pronadjen == false){
+        greske.push("fali @ u polju za gmail")
+    }else if(pronadjen2 == false){
+        greske.push("fali . u polju za gmail")
+    }
+    if(greske.length == 0){
+        novi_korisnik = {"korisnickoIme": korisnicko, "lozinka": lozinka, "ime": ime, "prezime": prezime, 
+        "telefon": telefon, "adresa": adresa, "datumRodjenja": datum, "email": gmail, "blokiran": false}
+
+        return true
+    }else{
+        return false
+    }
 }
