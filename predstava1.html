@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="predstava.css">
     <link rel="stylesheet" href="nav-bar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="ocene.css">
 </head>
 
 <body>
@@ -67,6 +69,75 @@
                 <h3 class="izmeni"><a href="izmeni_predstavu.html">Izmeni</a></h3>
 
             </div><br><br> -->
+        </div><br>
+        <div id="ocene" class="ocene">
+            <div id="zvezdice">
+                <span class="heading">Prosecna ocena</span>
+                <!-- <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p>4.1 srednja ocena za 254 glasanja.</p>   -->
+            </div>
+            <hr style="border:3px solid #f1f1f1">
+            <div class="row">
+                <div class="side">
+                    <div>5 star</div>
+                </div>
+                <div class="middle">
+                    <div class="bar-container">
+                        <div class="bar-5" id="bar-5"></div>
+                    </div>
+                </div>
+                <div class="side right">
+                    <div id="petice"></div>
+                </div>
+                <div class="side">
+                    <div>4 star</div>
+                </div>
+                <div class="middle">
+                    <div class="bar-container">
+                        <div  class="bar-4" id="bar-4"></div>
+                    </div>
+                </div>
+                <div class="side right">
+                    <div id="cetvorke"></div>
+                </div>
+                <div class="side">
+                    <div>3 star</div>
+                </div>
+                <div class="middle">
+                    <div class="bar-container">
+                        <div class="bar-3" id="bar-3"></div>
+                    </div>
+                </div>
+                <div class="side right">
+                    <div id="trojke"></div>
+                </div>
+                <div class="side">
+                    <div>2 star</div>
+                </div>
+                <div class="middle">
+                    <div class="bar-container">
+                        <div class="bar-2" id="bar-2"></div>
+                    </div>
+                </div>
+                <div class="side right">
+                    <div id="dvojke"></div>
+                </div>
+                <div class="side">
+                    <div>1 star</div>
+                </div>
+                <div class="middle">
+                    <div class="bar-container">
+                        <div class="bar-1" id="bar-1"></div>
+                    </div>
+                </div>
+                <div class="side right">
+                    <div id="jedinice"></div>
+                </div>
+            </div>
         </div><br>
         <div id="komentari" class="komentari">
             <!-- <div id="komentar1" class="komentar">
@@ -128,7 +199,8 @@
             </div>
             <div class="second">
                 <label><b>Telefon</b></label>
-                <input id="register5" type="tel" id="phone" placeholder="Unesite telefon" name="phone" pattern="[0-9]{10}" required>
+                <input id="register5" type="tel" id="phone" placeholder="Unesite telefon" name="phone"
+                    pattern="[0-9]{10}" required>
 
                 <label><b>Adresa</b></label>
                 <input id="register6" type="text" placeholder="Unesite adresu" name="psw" required>

@@ -18,20 +18,21 @@ function getPredstave(){
         // console.log(this.readyState)
         if (this.readyState == 4) {
             if (this.status == 200) {
-                predstave = JSON.parse(request.responseText);
-                predstave1 = predstave[pozoristeId[1]]
-                // console.log(predstave)
-                trenutnaPredstava = predstave1[predstaveId[1]]
+                trenutnaPredstava = JSON.parse(request.responseText);
+                // console.log(trenutnaPredstava)
+                // predstave = JSON.parse(request.responseText);
+                // predstave1 = predstave[pozoristeId[1]]
+                // trenutnaPredstava = predstave1[predstaveId[1]]
                 appendZaglavlje(trenutnaPredstava.naziv)
                 appendPredstava(predstaveId[1], trenutnaPredstava)
-                // dodajBezveze()
+                appendZvezdice(trenutnaPredstava)
             } else {
                 alert("Greška prilikom učitavanja predstava.");
             }
         }
     };
 
-    request.open("GET", firebaseURL + "/predstave.json");
+    request.open("GET", firebaseURL + "/predstave/" +pozoristeId[1]+ "/" +predstaveId[1]+".json");
     request.send();
     
 }
@@ -64,31 +65,6 @@ function showIzmeni(){
     window.location.href = "izmeni_predstavu.html?id=" + data + ";pozoriste=" + poz;
 }
 
-function showPosaljiKomentar(){
-    let ime = document.getElementById("ime").value
-    let text = document.getElementById("text").value
-    if(trenutnaPredstava.komentari == 0){
-        let listaKomentara = [{"ime": ime, "text": text,"id":1, "komentari": 0}]
-        trenutnaPredstava.komentari = listaKomentara
-    }else{
-        trenutnaPredstava.komentari.push({"ime": ime, "text": text,"id":trenutnaPredstava.komentari.length+1, "komentari": 0})
-    }
-    let put = new XMLHttpRequest();
-
-    put.onreadystatechange = function (e) {
-            if (this.readyState == 4) {
-                if (this.status == 200) {
-                    window.location.href = "predstava1.html?id=" + predstaveId[1] + ";pozoriste=" + pozoristeId[1];
-                } else {
-                    alert("Greška prilikom dodavanja komentara.");
-                }
-            }
-        };
-
-    put.open("PUT", firebaseURL + "/predstave/" + pozoristeId[1] + "/" + predstaveId[1] + ".json");
-    put.send(JSON.stringify(trenutnaPredstava));
-}
-
 function showPosaljiKomentar2(){
     let ime = document.getElementById("ime").value
     let text = document.getElementById("text").value
@@ -97,32 +73,13 @@ function showPosaljiKomentar2(){
     showRequest.setRequestHeader("Content-Type", "application/json");
     showRequest.onreadystatechange = function () {
         if (showRequest.readyState === 4 && showRequest.status === 200) {
-            alert("Uspesno postovanje komentara");
-            // closeForm2()
-            // window.location.href = "korisnici.html";
+            // alert("Uspesno postovanje komentara");
+            window.location.href = "predstava1.html?id=" + predstaveId[1] + ";pozoriste=" + pozoristeId[1];
         }
     };
     var data = JSON.stringify({"ime": ime, "text": text, "komentari": "0"});
     showRequest.send(data);
 }
-
-function dodajBezveze(){
-    console.log(trenutnaPredstava.komentari)
-    let showRequest = new XMLHttpRequest();
-    showRequest.open("POST", firebaseURL+"/predstave/" + pozoristeId[1] + "/" + predstaveId[1] + "/komentari/-N4MfBc4Be_QEMnhirG-/komentari.json", true);
-    showRequest.setRequestHeader("Content-Type", "application/json");
-    showRequest.onreadystatechange = function () {
-        if (showRequest.readyState === 4 && showRequest.status === 200) {
-            alert("Uspesno postovanje rucno komentara");
-            // closeForm2()
-            // window.location.href = "korisnici.html";
-            // window.location.href = "predstava1.html?id=" + predstaveId[1] + ";pozoriste=" + pozoristeId[1];
-        }
-    };
-    var data = JSON.stringify({"ime": "xx", "text": "xx", "komentari": 0});
-    showRequest.send(data);
-}
-
 
 function showKomentarisi(){
     // let clickedBtn = this;
@@ -260,16 +217,71 @@ function appendPredstava(id, pozoriste) {
     
 }
 
-// function odgovoriNaKom(){
-//     let clickedBtn = this;
-//     let data = clickedBtn.getAttribute("id");
-// }
+function appendZvezdice(pozoriste){
+    let zvezdice = document.getElementById("zvezdice")
+    let prosek = Math.round(pozoriste.ocena)
+    // alert(prosek)
+
+    for(let i = 1; i < 6; i++){
+        let prva = document.createElement("span");
+        prva.classList.add("fa", "fa-star")
+        if(prosek>=i){
+            prva.classList.add("checked")
+        }
+        zvezdice.appendChild(prva)
+    }
+
+    let broj = 0
+    for(let i in pozoriste.ocene){
+        // alert(i)
+        broj += parseInt(pozoriste.ocene[i])
+    }
+
+    let srednja = document.createElement("p");
+    srednja.innerText = pozoriste.ocena +" srednja ocena za "+broj+" glasanja"
+    zvezdice.appendChild(srednja)
+
+    let bar5 = document.getElementById("bar-5")
+    let posto5 = (pozoriste.ocene[4]/broj)*100
+    bar5.style.width = posto5.toString()+"%"
+
+    let bar4 = document.getElementById("bar-4")
+    let posto4 = (pozoriste.ocene[3]/broj)*100
+    bar4.style.width = posto4.toString()+"%"
+
+    let bar3 = document.getElementById("bar-3")
+    let posto3 = (pozoriste.ocene[2]/broj)*100
+    bar3.style.width = posto3.toString()+"%"
+
+    let bar2 = document.getElementById("bar-2")
+    let posto2 = (pozoriste.ocene[1]/broj)*100
+    bar2.style.width = posto2.toString()+"%"
+
+    let bar1 = document.getElementById("bar-1")
+    let posto1 = (pozoriste.ocene[0]/broj)*100
+    bar1.style.width = posto1.toString()+"%"
+
+    let petice = document.getElementById("petice")
+    petice.innerText = pozoriste.ocene[4]
+
+    let cetvorke = document.getElementById("cetvorke")
+    cetvorke.innerText = pozoriste.ocene[3]
+
+    let trojke = document.getElementById("trojke")
+    trojke.innerText = pozoriste.ocene[2]
+
+    let dvojke = document.getElementById("dvojke")
+    dvojke.innerText = pozoriste.ocene[1]
+
+    let jedinice = document.getElementById("jedinice")
+    jedinice.innerText = pozoriste.ocene[0]
+}
 
 function getIds(element){
     if(element.parentElement.getAttribute("id") == "komentari"){
         return [element.getAttribute("id")]
     }
-    alert("ids")
+    // alert("ids")
     let ids = getIds(element.parentElement)
     ids.push(element.getAttribute("id"))
 
@@ -298,10 +310,8 @@ function showPosaljiOdgovor(){
     showRequest.setRequestHeader("Content-Type", "application/json");
     showRequest.onreadystatechange = function () {
         if (showRequest.readyState === 4 && showRequest.status === 200) {
-            alert("Uspesno postovanje odgovora");
-            // closeForm2()
-            // window.location.href = "korisnici.html";
-            // window.location.href = "predstava1.html?id=" + predstaveId[1] + ";pozoriste=" + pozoristeId[1];
+            // alert("Uspesno postovanje odgovora");
+            window.location.href = "predstava1.html?id=" + predstaveId[1] + ";pozoriste=" + pozoristeId[1];
         }
     };
     var data = JSON.stringify({"ime": ime, "text": text, "komentari": "0"});
@@ -381,41 +391,6 @@ function createKom(id,komentar){
     return novi
 }
 
-function appendKomentarReq(id,parent, komentar){
-    // console.log(komentar.komentari)
-    if(komentar.komentari == "0"){
-        alert("ovde2")
-        let novi4 = createKom(id,parent)
-        for(let i in komentar){
-            let novi2 = createKom(i,komentar[i])
-            novi4.appendChild(novi2)
-        }
-        return novi4
-    }
-    let pocetni = createKom(id,komentar)
-    for(let kor in komentar.komentari){
-        // let tren = createKom(kor)
-        // deca
-        console.log(komentar.komentari[kor].komentari)
-        
-        // let novi = createKom(kor,komentar.komentari[kor])
-        if(komentar.komentari[kor].komentari!="0"){
-            alert("ovde")
-            let novi3 = appendKomentarReq(kor, komentar.komentari[kor], komentar.komentari[kor].komentari)
-            pocetni.appendChild(novi3)
-        }else{
-            alert("ovdebez")
-            let novi2 = createKom(kor,komentar.komentari[kor])
-            pocetni.appendChild(novi2)
-        }
-        // 
-        // let tt = appendKomentarReq(kor,komentar.komentari[kor],komentar.komentari[kor].komentari)
-        // pocetni.appendChild(novi)
-        
-    }
-    return pocetni
-
-}
 
 function req(id, komentar){
     if(komentar.komentari == "0"){

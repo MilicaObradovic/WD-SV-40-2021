@@ -56,6 +56,9 @@ td .btn:hover{
     color: rgba(255, 255, 255, 0.8);
 }
 
+/* .btn{
+    z-index: 1000;
+} */
 .mini-korisnik .btn{
     background-color:rgba(255, 255, 255, 0.1);
     color: white;

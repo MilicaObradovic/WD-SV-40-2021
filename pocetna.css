@@ -55,6 +55,9 @@
     margin-bottom:10px;
     opacity: 0.9;
 }
+/* .btn{
+    z-index: 500;
+} */
 .text .btn:hover{
     opacity: 1;
 }

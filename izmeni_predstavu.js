@@ -58,7 +58,7 @@ function validate(){
     let kod = document.getElementById('kod2').value;
     let osobe = document.getElementById('osobe2').value;
     let opis = document.getElementById('opis2').value;
-    alert(opis)
+    // alert(opis)
 
     if(naziv.length < 2){
         return false
@@ -89,7 +89,7 @@ function validate(){
     for(let i in kod){
         // alert(parseInt(kod[i]))
         if(isNaN(parseInt(kod[i])) == true ){
-            alert("ovde")
+            // alert("ovde")
             return false
         }
     }
@@ -126,6 +126,30 @@ function validate(){
 
 }
 
+// function getPredstave(){
+//     let request = new XMLHttpRequest();
+    
+//     request.onreadystatechange = function () {
+//         // console.log(this.readyState)
+//         if (this.readyState == 4) {
+//             if (this.status == 200) {
+//                 predstave = JSON.parse(request.responseText);
+//                 predstava1 = predstave[pozoristeId[1]]
+//                 // console.log(predstava)
+//                 predstava = predstava1[predstaveId[1]]
+//                 appendZaglavlje(predstava.naziv)
+//                 appendPredstava(predstaveId[1], predstava)
+//             } else {
+//                 alert("Greška prilikom učitavanja predstava.");
+//             }
+//         }
+//     };
+
+//     request.open("GET", firebaseURL + "/predstave.json");
+//     request.send();
+    
+// }
+
 function getPredstave(){
     let request = new XMLHttpRequest();
     
@@ -133,10 +157,11 @@ function getPredstave(){
         // console.log(this.readyState)
         if (this.readyState == 4) {
             if (this.status == 200) {
-                predstave = JSON.parse(request.responseText);
-                predstava1 = predstave[pozoristeId[1]]
-                // console.log(predstava)
-                predstava = predstava1[predstaveId[1]]
+                predstava = JSON.parse(request.responseText);
+                // console.log(trenutnaPredstava)
+                // predstave = JSON.parse(request.responseText);
+                // predstave1 = predstave[pozoristeId[1]]
+                // trenutnaPredstava = predstave1[predstaveId[1]]
                 appendZaglavlje(predstava.naziv)
                 appendPredstava(predstaveId[1], predstava)
             } else {
@@ -145,7 +170,7 @@ function getPredstave(){
         }
     };
 
-    request.open("GET", firebaseURL + "/predstave.json");
+    request.open("GET", firebaseURL + "/predstave/" +pozoristeId[1]+ "/" +predstaveId[1]+".json");
     request.send();
     
 }
