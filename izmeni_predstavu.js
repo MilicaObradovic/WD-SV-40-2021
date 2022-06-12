@@ -103,7 +103,7 @@ function validate(){
             if(j != predstaveId[1]){
                 if(predstave[i][j].kod == kod){
                     // console.log("kod nije validan")
-                    alert("ovde")
+                    // alert("ovde")
                     return false
                 }
             }
